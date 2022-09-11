@@ -2,8 +2,10 @@ const formatWord = (word: string) => {
   return `#${word.split("-").join("").toUpperCase()}`;
 };
 
-export const selectRandom = (words: Array<string>): string => {
+export const selectRandom = (words: Array<string>): Array<string> => {
   const listLength: number = words.length;
   const randomWord = words[Math.floor(Math.random() * listLength)];
-  return formatWord(randomWord);
+  const spanElement: string | undefined = randomWord.split('-')[0].toUpperCase();
+
+  return [formatWord(randomWord), spanElement];
 };
