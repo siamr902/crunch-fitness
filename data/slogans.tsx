@@ -3,5 +3,5 @@ export const slogans: string[] = [
     "we-all-crunch",
     "making-fitness-fun",
     "join-the-fun",
-    "crunch"
+    "cru-nch"
 ]

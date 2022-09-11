@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { Navbar } from "../components";
+import Login from "../components/navbar/Login";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       </Head>
       <header>
         <nav>
+          <Login />
           <Navbar />
         </nav>
       </header>
