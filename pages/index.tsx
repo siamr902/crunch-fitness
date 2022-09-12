@@ -7,7 +7,8 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Crunch Fitness</title>
+        <title>Crunch Gym - Top Rated Fitness Centers & Health Clubs</title>
+        <link rel="shortcut icon" href="/crunch-favicon.jpg"/>
       </Head>
       <header>
         <nav>

@@ -5,7 +5,7 @@ const Profile = () => {
   const [hover, setHover] = useState<boolean>(false);
   return (
     <div className="flex items-center sm:space-x-2 justify-evenly">
-      <p className="hidden sm:inline-flex font-serif font-semibold whitespace-nowrap text-xl pr-2 text-orange-600">
+      <p className="hidden lg:inline-flex font-serif font-semibold whitespace-nowrap text-xl pr-2 text-orange-600">
         Siam Rahman
       </p>
       <div className="flex items-center md:p-x-5 sm:h-14 p-2 relative">
