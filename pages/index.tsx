@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { Navbar } from "../components";
-import Login from "../components/navbar/Login";
+import Login from "../components/navbar/Slogan";
 
 const Home = () => {
   return (
