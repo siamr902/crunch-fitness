@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import axios, { AxiosResponse } from "axios";
 import { Navbar } from "../components";
+import {Footer} from "../components";
 import Slogan from "../components/navbar/Slogan";
 import WeatherDisplay from "../components/weather/WeatherDisplay";
 
@@ -23,7 +24,9 @@ const Home = ({ weatherData }: any) => {
         {weatherData.main.temp}
       </main>
 
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
