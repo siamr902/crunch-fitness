@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .footer-list-item {
+        @apply cursor-pointer list-disc
+    }
+}
