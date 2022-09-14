@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../../public/crunch-logo.svg";
-import Slogan from "./Slogan";
 import NavIcons from "./NavIcons";
 import Profile from "./Profile";
 
@@ -14,7 +13,7 @@ const Navbar = () => {
             src={logo}
             width={100}
             height={80}
-            className="cursor-pointer hover:-rotate-180 transition transform ease-in-out delay-150 z-60"
+            className="cursor-pointer hover:-rotate-180 transition transform-all ease-out delay-150"
           />
         </div>
       </section>

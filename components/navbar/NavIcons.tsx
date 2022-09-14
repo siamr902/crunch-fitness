@@ -10,11 +10,11 @@ const NavIcons = () => {
   return (
     <div className="hidden sm:inline-flex justify-center">
       <div className="flex space-x-6 md:space-x-6 flex-grow">
-        <NavIcon Icon={Map} />
-        <NavIcon Icon={Trainers} />
-        <NavIcon Icon={Payment} />
-        <NavIcon Icon={Workouts} />
-        <NavIcon Icon={Tracker} />
+        <NavIcon Icon={Map} Id={1}/>
+        <NavIcon Icon={Trainers} Id={2}/>
+        <NavIcon Icon={Payment} Id={3}/>
+        <NavIcon Icon={Workouts} Id={4}/>
+        <NavIcon Icon={Tracker} Id={5}/>
       </div>
     </div>
   );

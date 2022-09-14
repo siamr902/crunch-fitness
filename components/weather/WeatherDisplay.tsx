@@ -1,9 +1,6 @@
-import React from 'react'
-
 const WeatherDisplay = () => {
-  return (
-    <div>WeatherDisplay</div>
-  )
-}
 
-export default WeatherDisplay
+  return <div>Hello</div>;
+};
+
+export default WeatherDisplay;

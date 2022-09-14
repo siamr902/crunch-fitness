@@ -24,7 +24,7 @@ const Slogan = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#0e1111] h-auto flex justify-between p-2">
+    <div className="w-full bg-[#0e1111] h-auto flex justify-between p-2 shadow-sm">
       <div>
         <Link href="/">
           <p
@@ -42,7 +42,7 @@ const Slogan = () => {
         <div
           className={`${
             !hover && "hidden"
-          } text-red-300 bg-transparent flex items-center font-medium transition ease-in`}
+          } text-red-300 bg-transparent flex items-center font-medium`}
         >
           Sign Out?
         </div>

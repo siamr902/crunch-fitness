@@ -3,9 +3,10 @@ import { IconType } from "react-icons";
 
 type IconProps = {
   Icon: IconType;
+  Id?: number;
 };
 
-const NavIcon = ({ Icon }: IconProps) => {
+const NavIcon = ({ Icon, Id }: IconProps) => {
   const [hover, setHover] = useState<boolean>(false);
 
   return (
@@ -14,7 +15,7 @@ const NavIcon = ({ Icon }: IconProps) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <Icon className={`w-6 h-6 ${hover && "scale-110"}`} color={`${hover ? "#472D2D" : "#555555"}`} />
+      <Icon className={`w-6 h-6 ${Id === 4 && "rotate-45"} ${hover && "scale-110 transition-all duration-150 ease-out"}`} color={`${hover ? "#472D2D" : "#555555"}`} />
     </div>
   );
 };
