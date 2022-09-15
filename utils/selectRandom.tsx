@@ -1,4 +1,4 @@
-const formatWord = (word: string) => {
+const formatWord = (word: string): string => {
   return `#${word.split("-").join("").toUpperCase()}`;
 };
 

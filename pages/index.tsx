@@ -8,7 +8,7 @@ import WeatherDisplay from "../components/weather/WeatherDisplay";
 
 const Home = ({ weatherData }: any) => {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100">
       <Head>
         <title>Crunch Gym - Top Rated Fitness Centers & Health Clubs</title>
         <link rel="shortcut icon" href="/crunch-favicon-logo.png" />
@@ -20,8 +20,7 @@ const Home = ({ weatherData }: any) => {
         </nav>
       </header>
       <main>
-        <WeatherDisplay />
-        {weatherData.main.temp}
+        <WeatherDisplay weatherData={weatherData}/>
       </main>
 
       <footer>

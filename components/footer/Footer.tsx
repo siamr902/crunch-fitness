@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <ul className="flex space-x-8 text-white text-xs font-semibold tracking-widest opacity-40 flex-grow">
+          <ul className="hidden md:flex space-x-8 text-white text-xs font-semibold tracking-widest opacity-40 flex-grow">
             <li className="footer-list-item">CONTACT</li>
             <li className="footer-list-item">FAQ</li>
             <li className="footer-list-item">TERMS OF USE</li>

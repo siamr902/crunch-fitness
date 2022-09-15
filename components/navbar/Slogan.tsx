@@ -42,7 +42,7 @@ const Slogan = () => {
         <div
           className={`${
             !hover && "hidden"
-          } text-red-300 bg-transparent flex items-center font-medium`}
+          } text-white bg-transparent flex items-center font-medium`}
         >
           Sign Out?
         </div>
