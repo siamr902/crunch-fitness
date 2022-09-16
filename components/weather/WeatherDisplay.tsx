@@ -22,7 +22,6 @@ interface WeatherData {
 }
 
 const WeatherDisplay = ({ weatherData }: WeatherProps) => {
-  console.log(weatherData);
   const {
     main: { temp, temp_max: high, temp_min: low },
     name,
@@ -33,7 +32,6 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
 
   const weatherIcon = getWeatherIcon(icon)
 
-  console.log(weatherData);
   return (
     <div className="hidden relative lg:flex justify-center items-center flex-col w-52 h-48 bg-[#333] rounded-xl ml-1 mt-2 mb-2 text-white font-semibold space-y-2">
       <div className="absolute inset-2">

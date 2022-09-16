@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="flex justify-between items-center w-full shadow-sm p-5 bg-[#0e1111]">
       <div className="flex flex-col">
         <div className="space-y-6">
-          <div className="flex space-x-4 md:space-x-10 flex-grow">
+          <div className="hidden sm:flex space-x-4 md:space-x-10 flex-grow">
             <Socials
               Icon={GrFacebookOption}
               link={socialLinks.facebook}

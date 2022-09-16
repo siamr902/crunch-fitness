@@ -5,6 +5,7 @@ import { Navbar } from "../components";
 import {Footer} from "../components";
 import Slogan from "../components/navbar/Slogan";
 import WeatherDisplay from "../components/weather/WeatherDisplay";
+import EmbedVideo from "../components/video/EmbedVideo";
 
 const Home = ({ weatherData }: any) => {
   return (
@@ -21,6 +22,7 @@ const Home = ({ weatherData }: any) => {
       </header>
       <main>
         <WeatherDisplay weatherData={weatherData}/>
+        <EmbedVideo />
       </main>
 
       <footer>
