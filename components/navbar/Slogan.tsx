@@ -3,8 +3,12 @@ import React, { useEffect, useState } from "react";
 import { slogans } from "../../data/slogans";
 import { selectRandom } from "../../utils/selectRandom";
 import { IoMdExit } from "react-icons/io";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { RiErrorWarningFill } from "react-icons/ri";
 
 const Slogan = () => {
+  const { data: session } = useSession();
+
   const [hover, setHover] = useState<boolean>(false);
   const [slogan, setSlogan] = useState<string>("#NOJUDGEMENTS");
   const [span, setSpan] = useState<string>("");
@@ -24,7 +28,7 @@ const Slogan = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#0e1111] h-auto flex justify-between p-2 shadow-sm">
+    <div className="w-full bg-[#0e1111] h-15 flex justify-between p-2 shadow-sm">
       <div>
         <Link href="/">
           <p
@@ -38,21 +42,34 @@ const Slogan = () => {
         </Link>
       </div>
 
-      <div className="flex pr-4 space-x-4">
-        <div
-          className={`${
-            !hover && "hidden"
-          } text-white bg-transparent flex items-center font-medium`}
-        >
-          Sign Out?
+      {session ? (
+        <div className="flex pr-4 space-x-4">
+          <div
+            className={`${
+              !hover && "hidden"
+            } text-white bg-transparent flex items-center font-medium opacity-40`}
+          >
+            Sign Out?
+          </div>
+          <IoMdExit
+            color="#FFFFFF"
+            className="text-4xl cursor-pointer text-gray-300 transition transform hover:scale-90"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            onClick={() => signOut()}
+          />
         </div>
-        <IoMdExit
-          color="#FFFFFF"
-          className="text-4xl cursor-pointer text-gray-300 hover:animate-pulse transition transform hover:scale-90"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        />
-      </div>
+      ) : (
+        <div className="pr-4">
+          <button
+            className="font-semibold flex space-x-2 items-center text-md p-2 bg-red-600 text-white rounded-[10px] hover:scale-105"
+            onClick={() => signIn()}
+          >
+            <div className="text-lg"><RiErrorWarningFill color="#FFFF00" className="animate-pulse"/></div>
+            <div className="tracking-wide">Sign In</div>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

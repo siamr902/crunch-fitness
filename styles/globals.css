@@ -4,6 +4,6 @@
 
 @layer components {
     .footer-list-item {
-        @apply cursor-pointer list-disc
+        @apply cursor-pointer list-disc hover:text-white transition-all duration-150 delay-75 ease-in-out
     }
 }

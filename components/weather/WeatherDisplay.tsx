@@ -1,6 +1,5 @@
-import Image from "next/image";
-import { getWeatherIcon } from "../../utils/getWeatherIcon";
 import { kelvinToCelcius } from "../../utils/kelvinToCelcius";
+import { getWeatherImageText } from "../../utils/getWeatherImageText";
 
 interface WeatherProps {
   weatherData: any;
@@ -15,7 +14,6 @@ interface WeatherData {
   weather: {
     0: {
       main: string;
-      icon: string;
     };
   };
   name: string;
@@ -24,20 +22,21 @@ interface WeatherData {
 const WeatherDisplay = ({ weatherData }: WeatherProps) => {
   const {
     main: { temp, temp_max: high, temp_min: low },
-    name,
+    name = "Atlanta",
     weather: {
-      0: { main: status, icon},
+      0: { main: status },
     },
   }: WeatherData = weatherData;
 
-  const weatherIcon = getWeatherIcon(icon)
-
   return (
-    <div className="hidden relative lg:flex justify-center items-center flex-col w-52 h-48 bg-[#333] rounded-xl ml-1 mt-2 mb-2 text-white font-semibold space-y-2">
-      <div className="absolute inset-2">
-        <Image loader={() => weatherIcon} src={weatherIcon} width={40} height={40}/>
-      </div>
-      <div>{name}</div>
+    <div
+      className={`hidden lg:flex justify-center items-center flex-col w-52 h-48 bg-cover rounded-xl ml-1 mt-2 mb-2 font-semibold space-y-2 shadow-md shadow-black`}
+      style={{
+        backgroundImage: `url('/${status.toLowerCase()}weather.jpg')`,
+        color: `${getWeatherImageText(status)}`,
+      }}
+    >
+      <div className="text-lg">{name}</div>
       <div className="text-5xl">{kelvinToCelcius(temp)}</div>
       <div>{status}</div>
       <div>{`H: ${kelvinToCelcius(high)} L: ${kelvinToCelcius(low)}`}</div>

@@ -23,9 +23,13 @@ module.exports = {
       },
       animation: {
         'notification': 'shake 0.5s linear'
+      },
+      dropShadow: {
+        "hollow": "6px 6px 0px rgba(0,0,0,0.2)"
       }
     },
   },
   plugins: [
+    require('tailwind-scrollbar')
   ],
 };
