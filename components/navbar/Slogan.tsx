@@ -28,7 +28,7 @@ const Slogan = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#0e1111] h-15 flex justify-between p-2 shadow-sm">
+    <div className="w-full bg-gradient-to-r from-[#0e1111] to-[#222] h-15 flex justify-between p-2 shadow-sm">
       <div>
         <Link href="/">
           <p

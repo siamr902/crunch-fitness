@@ -1,30 +1,28 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 import { Navbar } from "../components";
 import { Footer } from "../components";
 import Slogan from "../components/navbar/Slogan";
-import WeatherDisplay from "../components/weather/WeatherDisplay";
-import EmbedVideo from "../components/video/EmbedVideo";
+import EmbedVideo from "../components/main-content/video/EmbedVideo";
 import { ToastContainer } from "react-toastify";
+import Content from "../components/main-content/Content";
 
 const Home = ({ weatherData }: any) => {
   return (
-    <div className="h-screen bg-gray-100 scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-orange-500 scroll-smooth">
+    <div className="h-screen scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-orange-500 scroll-smooth">
       <Head>
-        <title>Crunch Gym - Top Rated Fitness Centers & Health Clubs</title>
+        <title>Crunch Fitness - Top Rated Fitness Centers & Health Clubs</title>
         <link rel="shortcut icon" href="/crunch-logo.svg" />
       </Head>
-      <header>
-        <nav>
+      <Slogan />
+      <header className="sticky top-0 left-0">
           <ToastContainer />
-          <Slogan />
           <Navbar />
-        </nav>
       </header>
       <main>
-        <WeatherDisplay weatherData={weatherData} />
+        <Content weatherData={weatherData}/>
         <EmbedVideo />
       </main>
 

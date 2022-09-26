@@ -9,7 +9,7 @@ import NavIcon from "./NavIcon";
 const NavIcons = () => {
   return (
     <div className="hidden sm:inline-flex justify-center">
-      <div className="flex space-x-6 md:space-x-6 flex-grow">
+      <div className="flex justify-evenly space-x-6 sm:space-x-4 flex-grow">
         <NavIcon Icon={Map} Id={1}/>
         <NavIcon Icon={Trainers} Id={2}/>
         <NavIcon Icon={Payment} Id={3}/>

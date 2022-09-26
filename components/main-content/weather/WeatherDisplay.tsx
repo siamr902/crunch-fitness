@@ -1,5 +1,5 @@
-import { kelvinToCelcius } from "../../utils/kelvinToCelcius";
-import { getWeatherImageText } from "../../utils/getWeatherImageText";
+import { kelvinToCelcius } from "../../../utils/kelvinToCelcius";
+import { getWeatherImageText } from "../../../utils/getWeatherImageText";
 
 interface WeatherProps {
   weatherData: any;
@@ -30,16 +30,16 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
 
   return (
     <div
-      className={`hidden lg:flex justify-center items-center flex-col w-52 h-48 bg-cover rounded-xl ml-1 mt-2 mb-2 font-semibold space-y-2 shadow-md shadow-black`}
+      className={`hidden lg:flex justify-center items-center flex-col w-64 h-52 bg-cover rounded-xl ml-1 mt-2 mb-2 font-semibold space-y-2 shadow-md shadow-black`}
       style={{
         backgroundImage: `url('/${status.toLowerCase()}weather.jpg')`,
         color: `${getWeatherImageText(status)}`,
       }}
     >
-      <div className="text-lg">{name}</div>
+      <div className="text-xl">{name}</div>
       <div className="text-5xl">{kelvinToCelcius(temp)}</div>
-      <div>{status}</div>
-      <div>{`H: ${kelvinToCelcius(high)} L: ${kelvinToCelcius(low)}`}</div>
+      <div className="text-lg">{status}</div>
+      <div className="font-semibold text-lg">{`H: ${kelvinToCelcius(high)} L: ${kelvinToCelcius(low)}`}</div>
     </div>
   );
 };
