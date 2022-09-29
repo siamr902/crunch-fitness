@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
+import Crunchism2 from "./Crunchism1";
 import WeatherDisplay from "./weather/WeatherDisplay";
 
 const Content = ({ weatherData }: any) => {
@@ -9,6 +10,7 @@ const Content = ({ weatherData }: any) => {
         <WeatherDisplay weatherData={weatherData} />
         <Banner />
       </div>
+      <Crunchism2 />
     </>
   );
 };

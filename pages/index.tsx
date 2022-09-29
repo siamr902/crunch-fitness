@@ -5,7 +5,6 @@ import { GetServerSideProps } from "next";
 import { Navbar } from "../components";
 import { Footer } from "../components";
 import Slogan from "../components/navbar/Slogan";
-import EmbedVideo from "../components/main-content/video/EmbedVideo";
 import { ToastContainer } from "react-toastify";
 import Content from "../components/main-content/Content";
 
@@ -18,12 +17,11 @@ const Home = ({ weatherData }: any) => {
       </Head>
       <Slogan />
       <header className="sticky top-0 left-0">
-          <ToastContainer />
-          <Navbar />
+        <ToastContainer />
+        <Navbar />
       </header>
       <main>
-        <Content weatherData={weatherData}/>
-        <EmbedVideo />
+        <Content weatherData={weatherData} />
       </main>
 
       <footer>

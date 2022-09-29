@@ -14,7 +14,7 @@ const Profile = () => {
     setClicked(true);
     if (useGreenColor) {
       session ? notifyWelcome() : notifyUnauthenticated();
-      setTimeout(() => setUseGreenColor(false), 6000);
+      setTimeout(() => setUseGreenColor(false), 3000);
     }
   };
 
@@ -22,6 +22,7 @@ const Profile = () => {
     toast(`Welcome, ${session?.user?.name?.split(" ")[0] ?? "Anonymous"} 👋!`, {
       position: "top-center",
       theme: "dark",
+      autoClose: 3000,
       pauseOnHover: false,
     });
   };
@@ -31,6 +32,7 @@ const Profile = () => {
       type: "error",
       position: "top-center",
       theme: "dark",
+      autoClose: 3000,
       pauseOnHover: false,
     });
   };
