@@ -1,9 +1,9 @@
 import React from "react";
 
-const Crunchism1 = () => {
+const NoJudgement = () => {
   return (
     <div className="flex justify-center items-center flex-col space-y-4">
-      <h4 className='uppercase font-semibold font-croissant before:content-["——__"] after:content-["__——"]'>
+      <h4 className='crunchism'>
         Crunchism #1
       </h4>
       <div className="text-5xl scale-x-75 text-[#222] font-bold tracking-tighter">
@@ -14,4 +14,4 @@ const Crunchism1 = () => {
   );
 };
 
-export default Crunchism1;
+export default NoJudgement;

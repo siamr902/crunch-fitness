@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
-import Crunchism2 from "./Crunchism1";
+import Crunchism2 from "./NoJudgement";
+import EmbedVideo from "./EmbedVideo";
 import WeatherDisplay from "./weather/WeatherDisplay";
 
 const Content = ({ weatherData }: any) => {
@@ -11,6 +12,7 @@ const Content = ({ weatherData }: any) => {
         <Banner />
       </div>
       <Crunchism2 />
+      <EmbedVideo />
     </>
   );
 };

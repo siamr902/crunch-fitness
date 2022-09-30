@@ -9,16 +9,26 @@ const EmbedVideo = () => {
   };
 
   const opts: YouTubeProps["opts"] = {
-    height: "400",
-    width: "640",
+    height: "700",
+    width: "1400",
     playerVars: {
       autoplay: 1,
     },
   };
 
   return (
-    <div className="hidden lg:flex">
-      <YouTube videoId="wsY-nHH8HlY" opts={opts} onReady={onPlayerReady} />
+    <div className="hidden lg:flex justify-center items-center flex-col space-y-4 mt-5">
+      <h4 className="crunchism">Crunchism #4</h4>
+      <div className="text-5xl font-bold scale-x-75 text-[#222]">
+        Goals Are Made to be Crushed
+      </div>
+      <div className="font-semibold">
+        Train with our experts to drive your results.
+      </div>
+      <div className="uppercase font-bold text-xs tracking-widest cursor-pointer pt-4 text-orange-400 hover:text-black transition duration-300 ease-in-out">
+        Learn more about our individual and small group training programs
+      </div>
+      <YouTube videoId="KFSsMS2mZkM" opts={opts} onReady={onPlayerReady} />
     </div>
   );
 };

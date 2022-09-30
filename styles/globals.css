@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,11 +15,21 @@
   .footer-list-item {
     @apply cursor-pointer list-disc hover:text-white transition-all duration-150 delay-75 ease-in-out;
   }
+  .crunchism {
+    @apply uppercase font-croissant before:content-['——__'] after:content-['__——']
+  }
 }
 
 @layer utilities {
   .clipbg {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 7% 77%, 0% 54%, 7% 28%);
-
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%,
+      7% 77%,
+      0% 54%,
+      7% 28%
+    );
   }
 }
