@@ -19,7 +19,7 @@ const EmbedVideo = () => {
   return (
     <div className="hidden lg:flex justify-center items-center flex-col space-y-4 mt-5">
       <h4 className="crunchism">Crunchism #4</h4>
-      <div className="text-5xl font-bold scale-x-75 text-[#222]">
+      <div className="text-5xl font-bold scale-x-75 text-[#222] text-center -z-10">
         Goals Are Made to be Crushed
       </div>
       <div className="font-semibold">

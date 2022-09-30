@@ -1,5 +1,5 @@
-import { kelvinToCelcius } from "../../../utils/kelvinToCelcius";
-import { getWeatherImageText } from "../../../utils/getWeatherImageText";
+import { kelvinToCelcius } from "../../utils/kelvinToCelcius";
+import { getWeatherImageText } from "../../utils/getWeatherImageText";
 
 interface WeatherProps {
   weatherData: any;
