@@ -1,8 +1,10 @@
 import React from "react";
 import Banner from "./Banner";
-import Crunchism2 from "./NoJudgement";
+import NoJudgement from "./NoJudgement";
 import EmbedVideo from "./EmbedVideo";
 import WeatherDisplay from "./WeatherDisplay";
+import Energy from "./Energy";
+import MembershipBanner from "./MembershipBanner";
 
 const Content = ({ weatherData }: any) => {
   return (
@@ -11,8 +13,10 @@ const Content = ({ weatherData }: any) => {
         <WeatherDisplay weatherData={weatherData} />
         <Banner />
       </div>
-      <Crunchism2 />
+      <NoJudgement />
+      <Energy />
       <EmbedVideo />
+      <MembershipBanner />
     </>
   );
 };

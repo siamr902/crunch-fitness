@@ -6,12 +6,12 @@ import Head from "next/head";
 
 const SignIn = ({ providers }: any) => {
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen bg-gradient-to-r from-[#FDC830] to-[#F37335]">
+    <div className="flex justify-center items-center flex-col min-h-screen bg-gradient-to-r from-[#de1245] to-[#ffbc15]">
       <Head>
         <title>Sign In</title>
         <link rel="shortcut icon" href="/crunch-logo.svg" />
       </Head>
-      <div className="text-4xl font-bold text-orange-700 drop-shadow-hollow">
+      <div className="text-4xl font-bold text-orange-200 drop-shadow-hollow">
         Select a Provider
       </div>
       <div className="flex space-x-4 justify-center items-center mt-10">
@@ -22,7 +22,7 @@ const SignIn = ({ providers }: any) => {
           >
             <button
               onClick={() => signIn(provider.id, { callbackUrl: "/" })}
-              className="text-5xl hover:scale-110 hover:brightness-100 brightness-50"
+              className="text-5xl hover:scale-110 hover:brightness-75 brightness-50"
             >
               {getProviderImage(provider.name)}
             </button>

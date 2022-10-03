@@ -6,7 +6,7 @@ import Profile from "./Profile";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center z-50 px-5 lg:px-6 shadow-md w-full justify-between bg-stone-100">
+    <div className="flex items-center px-5 lg:px-6 shadow-md w-full justify-between bg-stone-100">
       <div className="flex flex-center object-contain">
         <Image
           src={logo}

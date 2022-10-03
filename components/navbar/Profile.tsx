@@ -14,7 +14,7 @@ const Profile = () => {
     setClicked(true);
     if (useGreenColor) {
       session ? notifyWelcome() : notifyUnauthenticated();
-      setTimeout(() => setUseGreenColor(false), 3000);
+      setTimeout(() => setUseGreenColor(false), 1000);
     }
   };
 
@@ -22,7 +22,7 @@ const Profile = () => {
     toast(`Welcome, ${session?.user?.name?.split(" ")[0] ?? "Anonymous"} 👋!`, {
       position: "top-center",
       theme: "dark",
-      autoClose: 3000,
+      autoClose: 2000,
       pauseOnHover: false,
     });
   };
@@ -47,7 +47,7 @@ const Profile = () => {
           />
         )}
       </div>
-      <p className="hidden lg:inline-flex font-serif font-semibold whitespace-nowrap text-xl pr-1 text-orange-600">
+      <p className="hidden lg:inline-flex font-serif font-semibold whitespace-nowrap text-xl pr-1 text-orange-600 cursor-not-allowed select-none">
         {session
           ? session?.user?.name || `${generateRandomName()}`
           : "Unauthenticated User"}

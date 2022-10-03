@@ -16,7 +16,7 @@ const Home = ({ weatherData }: any) => {
         <link rel="shortcut icon" href="/crunch-logo.svg" />
       </Head>
       <Slogan />
-      <header className="sticky top-0 left-0">
+      <header className="sticky top-0 left-0 z-50">
         <ToastContainer />
         <Navbar />
       </header>

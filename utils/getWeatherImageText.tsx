@@ -6,7 +6,7 @@ export const getWeatherImageText = (status: string): string | undefined => {
       return WHITE;
     case "Rain":
       return BLACK;
-    case "Cloudy":
+    case "Clouds":
       return BLACK;
     case "Drizzle":
       return WHITE;
