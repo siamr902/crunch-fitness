@@ -43,7 +43,7 @@ const Profile = () => {
         {session && (
           <img
             src={session?.user?.image!}
-            className="hidden lg:inline-flex rounded-full h-12 cursor-pointer hover:rotate-90 transition duration-150 ease-in-out"
+            className="hidden lg:inline-flex rounded-full h-12 cursor-pointer hover:rotate-90 transition duration-150 delay-100 ease-in-out"
           />
         )}
       </div>
@@ -55,7 +55,7 @@ const Profile = () => {
       <div className="flex items-center md:p-x-5 sm:h-14 p-2 relative">
         <IoMdNotifications
           className={`w-10 h-10 cursor-pointer ${
-            clicked && !useGreenColor && "hover:animate-notification"
+            clicked && !useGreenColor && "animate-notification"
           }`}
           color="#E2873C"
           onClick={handleClick}
@@ -65,7 +65,7 @@ const Profile = () => {
           className={`rounded-full w-[18px] h-[18px] absolute ${
             useGreenColor && session
               ? "bg-green-500 animate-pulse"
-              : "bg-red-500"
+              : "hidden"
           } top-1 right-3 ${
             clicked && !useGreenColor && "animate-notification"
           }`}

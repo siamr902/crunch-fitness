@@ -5,19 +5,26 @@ import EmbedVideo from "./EmbedVideo";
 import WeatherDisplay from "./WeatherDisplay";
 import Energy from "./Energy";
 import MembershipBanner from "./MembershipBanner";
+import CrunchMode from "./CrunchMode";
+import { motion } from "framer-motion";
 
 const Content = ({ weatherData }: any) => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div className="flex items-center justify-between w-full">
         <WeatherDisplay weatherData={weatherData} />
         <Banner />
       </div>
+      <CrunchMode />
       <NoJudgement />
       <Energy />
       <EmbedVideo />
       <MembershipBanner />
-    </>
+    </motion.div>
   );
 };
 

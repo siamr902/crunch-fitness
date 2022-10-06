@@ -29,7 +29,8 @@ module.exports = {
       },
       fontFamily: {
         "banner": ['Courgette'],
-        "croissant": ['Croissant One']
+        "croissant": ['Croissant One'],
+        "oswald": ['Oswald']
       }
     },
   },

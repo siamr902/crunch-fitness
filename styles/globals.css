@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +17,10 @@
     @apply cursor-pointer list-disc hover:text-white transition-all duration-150 delay-75 ease-in-out;
   }
   .crunchism {
-    @apply uppercase font-croissant before:content-['——__'] after:content-['__——']
+    @apply uppercase font-croissant italic before:content-['——__'] after:content-['__——'];
+  }
+  .bicep {
+    @apply hidden lg:inline-flex w-[5vw] h-[3vw]
   }
 }
 
@@ -31,5 +35,11 @@
       0% 54%,
       7% 28%
     );
+  }
+  .cliprightside {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 48% 49%, 100% 0%);
+  }
+  .clipleftside {
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 49% 50%, 0% 0%);
   }
 }

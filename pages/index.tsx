@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React from "react";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 import { Navbar } from "../components";
