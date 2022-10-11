@@ -10,7 +10,10 @@ const Navbar = () => {
     <motion.aside
       initial={{ width: 0, opacity: 0 }}
       animate={{ width: "100%", opacity: 1 }}
-      transition={{ duration: 1 as Transition, ease: "easeIn" as unknown as Transition }}
+      transition={{
+        duration: 1 as Transition,
+        ease: "easeIn" as unknown as Transition,
+      }}
     >
       <div className="flex items-center px-5 lg:px-6 shadow-md justify-between bg-stone-100">
         <div className="flex flex-center object-contain">
@@ -19,12 +22,9 @@ const Navbar = () => {
             width={100}
             height={80}
             className="cursor-pointer hover:-rotate-180 transition transform-all ease-out delay-150 duration-300"
-            onClick={() =>
-              window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-            }
+            onClick={() => document.getElementById("profile")?.scrollIntoView()}
           />
         </div>
-
         <NavIcons />
         <Profile />
       </div>

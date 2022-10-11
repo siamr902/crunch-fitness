@@ -1,4 +1,4 @@
-export const objectives = [
+export const objectives: { img: string; header: string; content: string }[] = [
   {
     img: "/crunchpositivity.png",
     header: "Positivity",

@@ -2,11 +2,8 @@ import Head from "next/head";
 import React from "react";
 import axios from "axios";
 import { GetServerSideProps } from "next";
-import { Navbar } from "../components";
-import { Footer } from "../components";
-import Slogan from "../components/navbar/Slogan";
+import { Navbar, Slogan, Footer, Content } from "../components";
 import { ToastContainer } from "react-toastify";
-import Content from "../components/main-content/Content";
 
 const Home = ({ weatherData }: any) => {
   return (
@@ -15,18 +12,20 @@ const Home = ({ weatherData }: any) => {
         <title>Crunch Fitness - Top Rated Fitness Centers & Health Clubs</title>
         <link rel="shortcut icon" href="/crunch-logo.svg" />
       </Head>
-      <Slogan />
+      <div id="profile">
+        <Slogan />
+      </div>
+
       <header className="sticky top-0 left-0 z-50">
         <ToastContainer />
         <Navbar />
       </header>
+
       <main>
         <Content weatherData={weatherData} />
       </main>
 
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 };

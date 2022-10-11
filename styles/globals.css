@@ -17,7 +17,7 @@
     @apply cursor-pointer list-disc hover:text-white transition-all duration-150 delay-75 ease-in-out;
   }
   .crunchism {
-    @apply uppercase font-croissant italic before:content-['——__'] after:content-['__——'];
+    @apply uppercase font-croissant before:content-['——__'] after:content-['__——'];
   }
   .bicep {
     @apply hidden lg:inline-flex w-[5vw] h-[3vw]

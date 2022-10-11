@@ -62,10 +62,10 @@ const Slogan = () => {
       ) : (
         <div className="pr-4">
           <button
-            className="font-semibold flex space-x-2 items-center text-md p-2 bg-red-600 text-white rounded-[10px] hover:scale-105"
+            className="font-semibold flex space-x-2 items-center text-md p-2 bg-red-600 text-white rounded-[10px] active:scale-90"
             onClick={() => signIn()}
           >
-            <div className="text-lg"><RiErrorWarningFill color="#FFFF00" className="animate-pulse"/></div>
+            <div className="text-lg"><RiErrorWarningFill className="animate-pulse text-red-300"/></div>
             <div className="tracking-wide">Sign In</div>
           </button>
         </div>

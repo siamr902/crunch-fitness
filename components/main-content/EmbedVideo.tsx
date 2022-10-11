@@ -1,5 +1,6 @@
 import React from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
+import { GiChewedSkull } from "react-icons/gi";
 
 const EmbedVideo = () => {
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
@@ -19,8 +20,10 @@ const EmbedVideo = () => {
   return (
     <div className="hidden xl:flex justify-center items-center flex-col space-y-4 mt-5 overflow-x-hidden">
       <h4 className="crunchism">Crunchism #3</h4>
-      <div className="text-5xl font-bold scale-x-75 text-[#222] text-center -z-10">
-        Goals Are Made to be Crushed
+      <div className="text-5xl font-bold scale-x-75 text-[#222] text-center -z-10 flex items-center">
+        Goals Are Made to be{" "}
+        <span className="text-red-600 ml-3 font-croissant">Crushed</span>
+        <GiChewedSkull className="h-12 w-14 absolute -top-2 -right-16 text-stone-400 -rotate-[12deg]" />
       </div>
       <div className="font-semibold">
         Train with our experts to drive your results.

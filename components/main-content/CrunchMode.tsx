@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { GiBiceps } from "react-icons/gi";
+import { useRouter } from "next/router";
 
 const CrunchMode = () => {
+  const router = useRouter();
   return (
     <div className="hidden sm:flex relative h-72 mt-4 items-center justify-center w-full">
       <div className="w-64 h-full bg-gradient-to-r from-[#de1245] to-orange-600 cliprightside"></div>
@@ -19,6 +21,7 @@ const CrunchMode = () => {
           className="w-[25%] h-[20%] p-3 mt-6 shadow-sm shadow-orange-200 bg-orange-100 uppercase rounded-sm tracking-widest font-bold text-red-800 text-[1vw]"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => router.push("/payment")}
         >
           Join Now
         </motion.button>

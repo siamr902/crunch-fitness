@@ -7,6 +7,7 @@ import Energy from "./Energy";
 import MembershipBanner from "./MembershipBanner";
 import CrunchMode from "./CrunchMode";
 import { motion } from "framer-motion";
+import MeetOurTrainers from "./MeetOurTrainers";
 
 const Content = ({ weatherData }: any) => {
   return (
@@ -20,6 +21,7 @@ const Content = ({ weatherData }: any) => {
         <Banner />
       </div>
       <CrunchMode />
+      <MeetOurTrainers />
       <NoJudgement />
       <Energy />
       <EmbedVideo />

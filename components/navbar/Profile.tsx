@@ -19,7 +19,7 @@ const Profile = () => {
   };
 
   const notifyWelcome = (): void => {
-    toast(`Welcome, ${session?.user?.name?.split(" ")[0] ?? "Anonymous"} 👋!`, {
+    toast(`Welcome, ${session?.user?.name?.split(" ")[0] ?? "Anonymous"}! 👋`, {
       position: "top-center",
       theme: "dark",
       autoClose: 2000,

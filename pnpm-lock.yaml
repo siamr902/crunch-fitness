@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@stripe/stripe-js': ^1.39.0
   '@types/node': 18.7.14
   '@types/react': 18.0.18
   '@types/react-dom': 18.0.6
@@ -22,6 +23,7 @@ specifiers:
   typescript: 4.8.2
 
 dependencies:
+  '@stripe/stripe-js': 1.39.0
   axios: 0.27.2
   framer-motion: 7.3.6_biqbaboplfbrettd7655fr4n2y
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
@@ -313,6 +315,10 @@ packages:
   /@rushstack/eslint-patch/1.1.4:
     resolution: {integrity: sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==}
     dev: true
+
+  /@stripe/stripe-js/1.39.0:
+    resolution: {integrity: sha512-BR7yzewVSBQgRao3V4HsTldpO4HpJUKcIlMDmBQaHqXUvkMpXHgOMF8/CZgFVMACS+pqvZIMmGuy3YvZlLEA2w==}
+    dev: false
 
   /@swc/helpers/0.4.3:
     resolution: {integrity: sha512-6JrF+fdUK2zbGpJIlN7G3v966PQjyx/dPt1T9km2wj+EUBqgrxCk3uX4Kct16MIm9gGxfKRcfax2hVf5jvlTzA==}

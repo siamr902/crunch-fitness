@@ -7,12 +7,12 @@ import NavIcon from "./NavIcon";
 
 const NavIcons = () => {
   return (
-    <div className="hidden sm:flex justify-center pl-10 translate-y-1">
+    <div className="hidden sm:flex justify-end lg:pl-28 translate-y-1">
       <div className="flex justify-evenly sm:space-x-4">
-        <NavIcon Icon={Trainers} id={2} popup="Trainers"/>
-        <NavIcon Icon={Payment} id={3} popup="Payment"/>
-        <NavIcon Icon={Workouts} id={4} popup="Workouts"/>
-        <NavIcon Icon={Tracker} id={5} popup="Tracker"/>
+        <NavIcon Icon={Trainers} popup="Trainers" />
+        <NavIcon Icon={Payment} popup="Payment" route="payment" />
+        <NavIcon Icon={Workouts} id={4} popup="Workouts" route="tracker" />
+        <NavIcon Icon={Tracker} popup="Tracker" route="tracker" />
       </div>
     </div>
   );
