@@ -5,6 +5,8 @@ interface PlanProps {
   info: string[];
   gradient?: string;
   color?: string;
+  apiId: string;
+  quantity?: number;
 }
 
 export const planDetails: PlanProps[] = [
@@ -28,6 +30,8 @@ export const planDetails: PlanProps[] = [
       "Tanning",
       "Advanced HIIT Classes",
     ],
+    apiId: "price_1LrRkyERF9M9xATNe4CZ4bTM",
+    quantity: 1
   },
   {
     plan: "Peak",
@@ -45,6 +49,8 @@ export const planDetails: PlanProps[] = [
       "Group Fitness Classes",
       "Crunch Live Online Workouts",
     ],
+    apiId: "price_1LrRlTERF9M9xATNenUs4xnD",
+    quantity: 1
   },
   {
     plan: "Base",
@@ -60,5 +66,7 @@ export const planDetails: PlanProps[] = [
       "Power Half Hour Circuit Training",
       "Free T-shirt",
     ],
+    apiId: "price_1LrRlpERF9M9xATN6Qpm3jRB",
+    quantity: 1
   },
 ];

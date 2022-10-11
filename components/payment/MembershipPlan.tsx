@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { AiOutlineStar } from "react-icons/ai";
+import { checkout } from "../../lib/checkout";
 
 interface PlanProps {
   plan: string;
@@ -8,6 +9,8 @@ interface PlanProps {
   info: string[];
   gradient?: string;
   color?: string;
+  apiId: string;
+  quantity?: number;
 }
 
 const formatPrice = (price: string): ReactNode => {
@@ -28,6 +31,8 @@ const MembershipPlan = ({
   info,
   gradient,
   color,
+  apiId,
+  quantity = 1,
 }: PlanProps) => {
   return (
     <div className="flex flex-col">
@@ -51,7 +56,19 @@ const MembershipPlan = ({
           {clubs}
         </div>
         <hr className="h-[2px] bg-[#333] w-[25%] my-5" />
-        <button className="text-white bg-[#222] shadow-md shadow-gray-500 p-4 mt-24 w-[95%] font-semibold text-[22px] tracking-wide active:scale-90 transition duration-200 ease-out">
+        <button
+          className="text-white bg-[#222] shadow-md shadow-gray-500 p-4 mt-24 w-[95%] font-semibold text-[22px] tracking-wide active:scale-90 transition duration-200 ease-out"
+          onClick={() => {
+            checkout({
+              lineItems: [
+                {
+                  price: apiId,
+                  quantity: quantity,
+                },
+              ],
+            });
+          }}
+        >
           SELECT
         </button>
       </section>

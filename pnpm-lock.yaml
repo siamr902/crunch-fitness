@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@stripe/stripe-js': ^1.39.0
+  '@types/canvas-confetti': ^1.4.3
   '@types/node': 18.7.14
   '@types/react': 18.0.18
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.8
   axios: ^0.27.2
+  canvas-confetti: ^1.5.1
   eslint: 8.23.0
   eslint-config-next: 12.2.5
   framer-motion: ^7.3.6
@@ -25,6 +27,7 @@ specifiers:
 dependencies:
   '@stripe/stripe-js': 1.39.0
   axios: 0.27.2
+  canvas-confetti: 1.5.1
   framer-motion: 7.3.6_biqbaboplfbrettd7655fr4n2y
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.10.3_biqbaboplfbrettd7655fr4n2y
@@ -36,6 +39,7 @@ dependencies:
   tailwind-scrollbar: 2.0.1_tailwindcss@3.1.8
 
 devDependencies:
+  '@types/canvas-confetti': 1.4.3
   '@types/node': 18.7.14
   '@types/react': 18.0.18
   '@types/react-dom': 18.0.6
@@ -325,6 +329,10 @@ packages:
     dependencies:
       tslib: 2.4.0
     dev: false
+
+  /@types/canvas-confetti/1.4.3:
+    resolution: {integrity: sha512-UwFPTsW1ZwVyo/ETp4hPSikSD7yl2V42E3VWBF5P/0+DHO4iajyceWv7hfNdZ2AX5tkZnuViiBWOqyCPohU2FQ==}
+    dev: true
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
@@ -619,6 +627,10 @@ packages:
 
   /caniuse-lite/1.0.30001390:
     resolution: {integrity: sha512-sS4CaUM+/+vqQUlCvCJ2WtDlV81aWtHhqeEVkLokVJJa3ViN4zDxAGfq9R8i1m90uGHxo99cy10Od+lvn3hf0g==}
+
+  /canvas-confetti/1.5.1:
+    resolution: {integrity: sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg==}
+    dev: false
 
   /chalk/4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
