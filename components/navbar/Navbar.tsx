@@ -15,7 +15,7 @@ const Navbar = () => {
         ease: "easeIn" as unknown as Transition,
       }}
     >
-      <div className="flex items-center px-5 lg:px-6 shadow-md justify-between bg-stone-100">
+      <nav className="flex items-center px-5 lg:px-6 shadow-md justify-between bg-stone-100">
         <div className="flex flex-center object-contain">
           <Image
             src={logo}
@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
         <NavIcons />
         <Profile />
-      </div>
+      </nav>
     </motion.aside>
   );
 };

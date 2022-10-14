@@ -8,8 +8,10 @@ import NavIcon from "./NavIcon";
 const NavIcons = () => {
   return (
     <div className="hidden sm:flex justify-end lg:pl-28 translate-y-1">
-      <div className="flex justify-evenly sm:space-x-4">
-        <NavIcon Icon={Trainers} popup="Trainers" />
+      <div className="flex justify-evenly space-x-4">
+        <span onClick={() => document.getElementById('trainers')?.scrollIntoView()}>
+          <NavIcon Icon={Trainers} popup="Trainers" />
+        </span>
         <NavIcon Icon={Payment} popup="Payment" route="payment" />
         <NavIcon Icon={Workouts} id={4} popup="Workouts" route="tracker" />
         <NavIcon Icon={Tracker} popup="Tracker" route="tracker" />

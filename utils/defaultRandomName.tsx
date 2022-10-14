@@ -4,7 +4,7 @@ export default function generateRandomName(): string {
   let res = "";
   for (let i = 0; i < length; i++) {
     res +=
-      i === 0 || i === length
+      i === 0 || i === length - 1
         ? characters.charAt(~~(Math.random() * characters.length))
         : characters.charAt(~~Math.random() * characters.length).toLowerCase();
   }

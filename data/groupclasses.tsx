@@ -2,8 +2,8 @@ import { BiDumbbell } from "react-icons/bi";
 import { FaBicycle } from "react-icons/fa";
 import { AiOutlineFire } from "react-icons/ai";
 import { GiSurprised } from "react-icons/gi";
-import {GiBoxingGloveSurprise} from "react-icons/gi";
-import {GiHiveMind} from "react-icons/gi";
+import { GiBoxingGloveSurprise } from "react-icons/gi";
+import { GiHiveMind } from "react-icons/gi";
 import { IconType } from "react-icons";
 
 const groupclasses: {
@@ -40,7 +40,8 @@ const groupclasses: {
   {
     src: "/actionsportsgroupclass.jpg",
     header: "Action Sports",
-    description: "Your heart is about to raise the roof with our action packed classes.",
+    description:
+      "Your heart is about to raise the roof with our action packed classes.",
     Icon: GiBoxingGloveSurprise,
   },
   {

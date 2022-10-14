@@ -1,26 +1,34 @@
+import { IconType } from "react-icons";
+import { GiQueenCrown, GiImperialCrown } from "react-icons/gi";
+import { FaCrown } from "react-icons/fa";
+
 const trainers: {
   name: string;
   age: number;
   pic: string | undefined;
   desc: string;
+  Icon: IconType;
 }[] = [
   {
-    name: "Johnathan Moffet",
+    name: "Jonathan Moffet",
     age: 28,
-    pic: "",
-    desc: "",
+    pic: "/jonathanmoffet.jpg",
+    desc: "ELITE Personal Trainer, incredible father, professsional snowboarder, and checkers prodigy!",
+    Icon: FaCrown,
   },
   {
-    name: "Kris Watson",
+    name: "Dave Watson",
     age: 26,
-    pic: "",
-    desc: "",
+    pic: "/davewatson.jpg",
+    desc: "Laid-back trainer. Extensive knowledge in baseball — and fitness of course.",
+    Icon: GiImperialCrown,
   },
   {
-    name: "David Gunner",
+    name: "Kayla Moore",
     age: 32,
-    pic: "",
-    desc: "",
+    pic: "/kaylamarshall.jpg",
+    desc: "Mother of three. Marathon runner. Yoga instructer. The perfect companion for your fitness journey!",
+    Icon: GiQueenCrown,
   },
 ];
 

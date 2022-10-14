@@ -11,7 +11,7 @@ const CrunchMode = () => {
       <div className="h-auto relative bg-gradient-to-tr shadow-md shadow-black from-[#cc0234] to-orange-500 rounded-md p-6 flex-grow flex flex-col justify-center items-center">
         <GiBiceps className="bicep absolute right-[45%] -top-[22%] text-[#cc0234]" />
         <GiBiceps className="bicep absolute right-[49%] -top-[22%] -scale-x-100 text-[#de1245]" />
-        <div className="uppercase text-orange-200 mb-2 font-oswald text-[3vw] scale-y-90">
+        <div className="uppercase text-orange-200 mb-2 font-oswald font-bold text-[3vw] scale-y-90">
           Go <span className="text-orange-300">Crunch</span> Mode
         </div>
         <div className="uppercase text-fuchsia-200 font-semibold font-mono tracking-wider text-[1.5vw] text-center">
