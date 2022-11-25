@@ -31,6 +31,9 @@ module.exports = {
         "banner": ['Courgette'],
         "croissant": ['Croissant One'],
         "oswald": ['Oswald']
+      },
+      screens: {
+        'smx': '450px'
       }
     },
   },

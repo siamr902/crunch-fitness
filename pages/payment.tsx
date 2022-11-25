@@ -6,7 +6,7 @@ import MembershipPlans from "../components/payment/MembershipPlans";
 
 const Payment = () => {
   return (
-    <div className="h-screen scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-orange-500 scroll-smooth">
+    <div>
       <Head>
         <title>
           Cheap Monthly Gym Memberships - High Value, Low Prices & Costs

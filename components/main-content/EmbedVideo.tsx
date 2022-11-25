@@ -1,6 +1,5 @@
 import React from "react";
 import YouTube, { YouTubeProps } from "react-youtube";
-import { GiChewedSkull } from "react-icons/gi";
 
 const EmbedVideo = () => {
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
@@ -10,28 +9,32 @@ const EmbedVideo = () => {
   };
 
   const opts: YouTubeProps["opts"] = {
-    height: "700",
-    width: "1400",
     playerVars: {
       autoplay: 1,
     },
   };
 
   return (
-    <div className="hidden xl:flex justify-center items-center flex-col space-y-4 mt-5 overflow-x-hidden">
+    <div className="flex justify-center items-center flex-col space-y-4 mt-5 overflow-x-hidden p-5">
       <h4 className="crunchism">Crunchism #3</h4>
-      <div className="text-5xl font-bold scale-x-75 text-[#222] text-center -z-10 flex items-center">
+      <div className="text-4xl sm:text-5xl font-bold scale-x-75 text-[#222] text-center -z-10">
         Goals Are Made to be{" "}
-        <span className="text-red-600 ml-3 font-croissant">Crushed</span>
-        <GiChewedSkull className="h-12 w-14 absolute -top-2 -right-16 text-stone-400 -rotate-[12deg]" />
+        <span className="text-red-600 font-croissant">
+          Crushed
+        </span>
       </div>
-      <div className="font-semibold">
+      <div className="font-semibold tracking-wide text-center text-md sm:text-lg">
         Train with our experts to drive your results.
       </div>
-      <div className="uppercase font-bold text-xs tracking-widest cursor-pointer pt-4 text-orange-400 hover:text-black transition duration-300 ease-in-out">
+      <div className="uppercase font-bold text-xs text-center tracking-widest cursor-pointer pt-4 text-orange-400 hover:text-black transition duration-300 ease-in-out">
         Learn more about our individual and small group training programs
       </div>
-      <YouTube videoId="KFSsMS2mZkM" opts={opts} onReady={onPlayerReady} />
+      <YouTube
+        videoId="KFSsMS2mZkM"
+        opts={opts}
+        onReady={onPlayerReady}
+        iframeClassName="w-[90vw] h-[50vh] md:h-[60vh] lg:h-[68vh] xl:h-[700px] xl:w-[calc(100vw-5rem)]"
+      />
     </div>
   );
 };

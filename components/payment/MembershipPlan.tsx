@@ -40,19 +40,22 @@ const MembershipPlan = ({
         className="w-full h-[8px]"
         style={{ background: `linear-gradient(to right, ${gradient})` }}
       />
-      <section className="relative flex flex-col justify-center items-center bg-[#F4F4F4] p-5 w-[29vw]">
+      <section className="relative flex flex-col justify-center items-center bg-[#F4F4F4] p-5 w-[calc(100vw-7rem)] md:w-[29vw]">
         {plan === "Peak Results" && (
-          <AiOutlineStar className="w-10 h-10 absolute top-2 left-2 text-amber-600 -rotate-[0deg]" />
+          <AiOutlineStar className="w-7 h-7 sm:w-10 sm:h-10 absolute top-2 left-2 text-amber-600 cursor-pointer" />
         )}
-        <div className="font-bold text-gray-800">{plan}</div>
-        <div className="mt-5 text-6xl text-[#222] font-bold">
+        <div className="font-bold text-gray-800 text-center">{plan}</div>
+        <div className="mt-5 text-6xl text-[#222] text-center font-bold">
           {formatPrice(price)}
         </div>
-        <div className="mt-5 text-gray-400 text-sm font-semibold">
+        <div className="mt-5 text-gray-400 text-sm text-center font-semibold">
           Monthly Recurring Payment
         </div>
         <div className="h-[2px] bg-[#333] w-[25%] my-5"></div>
-        <div className="uppercase font-semibold" style={{ color: color }}>
+        <div
+          className="uppercase font-semibold text-center"
+          style={{ color: color }}
+        >
           {clubs}
         </div>
         <hr className="h-[2px] bg-[#333] w-[25%] my-5" />
@@ -73,7 +76,7 @@ const MembershipPlan = ({
         </button>
       </section>
       <section
-        className="flex flex-col justify-start text-center h-[75vh] items-center p-5 w-[29vw] text-white"
+        className="flex flex-col justify-start text-center h-[75vh] items-center p-5 w-[calc(100vw-7rem)] md:w-[29vw] text-white"
         style={{ background: `linear-gradient(to bottom right, ${gradient})` }}
       >
         <div className="uppercase font-bold tracking-widest pt-5">Includes</div>

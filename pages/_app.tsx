@@ -6,10 +6,10 @@ import { useRouter } from "next/router";
 
 const variants = {
   in: {
-    opacity: 1,
+    opacity: 0,
   },
   out: {
-    opacity: 0,
+    opacity: 1,
   },
 };
 
@@ -17,13 +17,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   const router = useRouter();
   return (
     <SessionProvider session={session}>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <motion.div
           key={router.route}
           variants={variants}
-          initial="out"
-          animate="in"
-          exit="out"
+          initial="in"
+          animate="out"
+          exit="in"
           transition={{
             duration: 1,
           }}

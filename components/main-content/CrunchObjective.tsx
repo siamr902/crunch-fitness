@@ -14,10 +14,10 @@ const CrunchObjective = ({ src, header, content }: ObjectiveProps) => {
         alt={header}
         className="w-100 h h-64 scale-75 object-contain"
       />
-      <div className="text-3xl font-bold scale-x-90 tracking-tighter text-[#222] uppercase hidden md:inline-flex">
+      <div className="text-3xl font-bold scale-x-90 tracking-tighter text-[#222] uppercase">
         {header}
       </div>
-      <div className="hidden md:inline-flex text-center max-w-[20rem] mt-4 font-semibold text-gray-700 text-[15px]">
+      <div className="text-center max-w-[20rem] mt-4 font-semibold text-gray-700 text-[15px]">
         {content}
       </div>
     </div>

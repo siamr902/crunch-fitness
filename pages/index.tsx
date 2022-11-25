@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 const Home = ({ weatherData }: any) => {
   return (
-    <div className="h-screen scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-orange-500 scroll-smooth">
+    <>
       <Head>
         <title>Crunch Fitness - Top Rated Fitness Centers & Health Clubs</title>
         <link rel="shortcut icon" href="/crunch-logo.svg" />
@@ -15,18 +15,13 @@ const Home = ({ weatherData }: any) => {
       <div id="profile">
         <Slogan />
       </div>
-
       <header className="sticky top-0 left-0 z-50">
         <ToastContainer />
         <Navbar />
       </header>
-
-      <main>
-        <Content weatherData={weatherData} />
-      </main>
-
+      <Content weatherData={weatherData} />
       <Footer />
-    </div>
+    </>
   );
 };
 

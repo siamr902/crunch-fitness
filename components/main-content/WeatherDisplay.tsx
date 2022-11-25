@@ -28,7 +28,6 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
     },
   }: WeatherData = weatherData;
 
-  console.log(status)
 
   return (
     <div

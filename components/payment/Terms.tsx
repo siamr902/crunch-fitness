@@ -3,7 +3,7 @@ import { termLink } from "../../data/socialLinks";
 
 const Terms = () => {
   return (
-    <div className="text-[1vw] text-start mr-[12%]">
+    <div className="text-[2vw] sm:text-[1.2vw] lg:text-[1vw] text-start mx-auto">
       <div className="text-gray-600 font-semibold">
         * An annual fee will be billed once per year. To see details of when you
         will be charged the full annual fee, see the{" "}

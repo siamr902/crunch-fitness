@@ -11,7 +11,7 @@ import MeetOurTrainers from "./MeetOurTrainers";
 
 const Content = ({ weatherData }: any) => {
   return (
-    <motion.div
+    <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -26,7 +26,7 @@ const Content = ({ weatherData }: any) => {
       <Energy />
       <EmbedVideo />
       <MembershipBanner />
-    </motion.div>
+    </motion.main>
   );
 };
 

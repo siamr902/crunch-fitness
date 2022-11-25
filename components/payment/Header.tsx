@@ -18,7 +18,7 @@ const Header = () => {
       }}
     >
       <div className="relative w-full px-5 py-2 h-[45px] items-center justify-between bg-black shadow-sm mb-10 whitespace-nowrap">
-        <div className="absolute font-oswald sm:text-sm lg:text-lg top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-[17px] text-white font-bold uppercase tracking-wider scale-x-90">
+        <div className="hidden sm:inline-flex absolute font-oswald text-sm lg:text-lg top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-[17px] text-white font-bold uppercase tracking-wider scale-x-90">
           Take the first step to a healthier, happier you
         </div>
         <div className="flex flex-center object-contain">
