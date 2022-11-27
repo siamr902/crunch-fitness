@@ -1,4 +1,4 @@
-import { User, Workout } from "@prisma/client";
+import { Exercise, User, Workout } from "@prisma/client";
 import { motion } from "framer-motion";
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
@@ -10,8 +10,15 @@ import Header from "../components/tracker/Header";
 import { TrackerContext } from "../contexts/TrackerContext";
 
 type Props = {
-  user: User & {workouts: Workout[]};
-}
+  user: User & {
+    workouts: {
+      exercises: Exercise[];
+      id: string;
+      name: string;
+      rating: number;
+    }[];
+  };
+};
 
 const Tracker = ({ user }: Props) => {
   return (
@@ -43,7 +50,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
       email: session?.user?.email,
     },
     include: {
-      workouts: true,
+      workouts: {
+        where: {
+          rating: { gte: 1 },
+        },
+        select: {
+          exercises: true,
+          id: true,
+          name: true,
+          rating: true,
+        },
+      },
     },
   });
 

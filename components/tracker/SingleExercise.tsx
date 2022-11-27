@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { BsCheckLg } from "react-icons/bs";
 
 type Exercise = {
   name: string;
@@ -10,19 +9,28 @@ type Exercise = {
 
 interface Props {
   setExercises: (v: Exercise[]) => void;
+  exercises: Exercise[];
 }
 
-const SingleExercise = ({ setExercises }: Props) => {
+const SingleExercise = ({ setExercises, exercises }: Props) => {
   const nameRef = useRef<string>("");
   const setsRef = useRef<string>("");
   const repsRef = useRef<string>("");
   const resistanceRef = useRef<string>("");
-  
+
   const [disabled, setDisabled] = useState<boolean>(false);
 
   const handleComplete = () => {
     setDisabled(true);
-    console.log(nameRef.current, setsRef.current, repsRef.current, resistanceRef.current);
+    setExercises([
+      ...exercises,
+      {
+        name: nameRef.current,
+        sets: Number(setsRef.current),
+        reps: Number(repsRef.current),
+        weight: Number(resistanceRef.current),
+      },
+    ]);
   };
 
   return (
@@ -30,14 +38,14 @@ const SingleExercise = ({ setExercises }: Props) => {
       <input
         type="text"
         placeholder="name"
-        className="exercise"
+        className={`exercise ${disabled && "bg-gray-200 cursor-not-allowed"}`}
         onChange={(e) => (nameRef.current = e.target.value)}
         disabled={disabled}
       />
       <input
         type="number"
         placeholder="sets"
-        className="exercise"
+        className={`exercise ${disabled && "bg-gray-200 cursor-not-allowed"}`}
         min={0}
         onChange={(e) => (setsRef.current = e.target.value)}
         disabled={disabled}
@@ -45,7 +53,7 @@ const SingleExercise = ({ setExercises }: Props) => {
       <input
         type="number"
         placeholder="reps"
-        className="exercise"
+        className={`exercise ${disabled && "bg-gray-200 cursor-not-allowed"}`}
         min={0}
         onChange={(e) => (repsRef.current = e.target.value)}
         disabled={disabled}
@@ -53,15 +61,20 @@ const SingleExercise = ({ setExercises }: Props) => {
       <input
         type="number"
         placeholder="resistance (kg)"
-        className="exercise"
+        className={`exercise ${disabled && "bg-gray-200 cursor-not-allowed"}`}
         min={0}
         onChange={(e) => (resistanceRef.current = e.target.value)}
         disabled={disabled}
       />
-      <BsCheckLg
-        className="w-7 h-7 cursor-pointer text-blue-500 active:scale-95 transition duration-200 ease-out"
+      <button
+        className={`p-3 text-xl font-kalam rounded-md outline-none active:scale-90 transition duration-200 ease-out ${
+          disabled && "cursor-not-allowed"
+        }`}
         onClick={() => handleComplete()}
-      />
+        disabled={disabled}
+      >
+        ADD
+      </button>
     </div>
   );
 };

@@ -57,6 +57,7 @@ model VerificationToken {
 
 model Workout {
   id         String     @id @default(uuid())
+  name       String
   rating     Int
   finishedAt DateTime   @default(now())
   user       User?      @relation(fields: [userId, userEmail], references: [id, email])
@@ -68,8 +69,8 @@ model Workout {
 }
 
 model Exercise {
-  id        Int     @id
-  name      String  @db.VarChar(50)
+  id        String  @id @default(cuid())
+  name      String  @db.VarChar(255)
   sets      Int
   reps      Int
   weight    Int
