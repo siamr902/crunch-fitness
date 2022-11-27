@@ -38,7 +38,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex items-center sm:space-x-2 justify-evenly">
+    <div className="hidden sm:flex items-center sm:space-x-2 justify-evenly">
       <div className="mr-5">
         {session && (
           <img

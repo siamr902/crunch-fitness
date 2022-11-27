@@ -17,26 +17,24 @@ const Header = () => {
         ease: "easeIn",
       }}
     >
-      <div className="relative w-full px-5 py-2 h-[45px] items-center justify-between bg-black shadow-sm mb-10 whitespace-nowrap">
+      <header className="relative w-full px-5 py-2 h-[45px] items-center justify-between bg-black shadow-sm mb-10 whitespace-nowrap">
         <div className="hidden sm:inline-flex absolute font-oswald text-sm lg:text-lg top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-[17px] text-white font-bold uppercase tracking-wider scale-x-90">
           Take the first step to a healthier, happier you
         </div>
-        <div className="flex flex-center object-contain">
           <Image
             src={logo}
             width={90}
             height={60}
-            className="cursor-pointer hover:-rotate-180 transition transform-all ease-out delay-150 duration-300"
+            className="cursor-pointer hover:-rotate-180 transition transform-all ease-out delay-150 duration-300 object-contain"
             onClick={() => router.push("/")}
           />
-        </div>
         <div
           className="absolute top-[50%] -translate-y-[50%] right-8 cursor-pointer hover:scale-90 active:scale-100 transition ease-in-out duration-200"
           onClick={() => signOut({ callbackUrl: "/" })}
         >
           <IoMdLogOut className="w-8 h-8 text-orange-300" />
         </div>
-      </div>
+      </header>
     </motion.aside>
   );
 };

@@ -31,7 +31,7 @@ const SignIn = ({ providers }: any) => {
           >
             <button
               onClick={() => signIn(provider.id, { callbackUrl: "/" })}
-              className="text-5xl hover:scale-110 active:scale-100 hover:brightness-75 brightness-50"
+              className="text-5xl hover:scale-105 active:scale-100 hover:mix-blend-multiply brightness-50 transition duration-200 ease-out"
             >
               {getProviderImage(provider.name)}
             </button>

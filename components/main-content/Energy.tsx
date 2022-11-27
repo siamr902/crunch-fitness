@@ -4,7 +4,10 @@ import GroupClass from "./GroupClass";
 
 const Energy = () => {
   return (
-    <div className="flex justify-center flex-col items-center space-y-4 mt-5 p-5">
+    <div
+      className="flex justify-center flex-col items-center space-y-4 mt-5 p-5"
+      id="classes"
+    >
       <h4 className="crunchism">Crunchism #2</h4>
       <div className="text-4xl sm:text-5xl font-bold scale-x-75 text-[#222] text-center -z-10">
         Energy is For Everyone

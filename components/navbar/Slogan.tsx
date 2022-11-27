@@ -33,7 +33,7 @@ const Slogan = () => {
         <Link href="/">
           <p
             className="font-serif text-xl font-semibold text-gray-200 cursor-pointer whitespace-nowrap"
-            onClick={generateSlogan}
+            onClick={() => generateSlogan()}
           >
             <span className="text-2xl select-none">#</span>
             <span className="text-orange-500 select-none">{span}</span>
@@ -62,11 +62,10 @@ const Slogan = () => {
       ) : (
         <div className="pr-4">
           <button
-            className="font-semibold flex space-x-2 items-center text-md p-2 bg-red-600 text-white rounded-[10px] active:scale-90"
+            className="font-semibold flex space-x-2 items-center text-md tracking-wide uppercase py-2 px-3 bg-red-600 text-white rounded-[8px] active:scale-90 transition duration-200 ease-out"
             onClick={() => signIn()}
           >
-            <div className="text-lg"><RiErrorWarningFill className="animate-pulse text-red-300"/></div>
-            <div className="tracking-wide">Sign In</div>
+            Sign In
           </button>
         </div>
       )}

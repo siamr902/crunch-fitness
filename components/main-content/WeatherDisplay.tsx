@@ -28,7 +28,6 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
     },
   }: WeatherData = weatherData;
 
-
   return (
     <div
       className="hidden lg:flex justify-center items-center flex-col font-croissant w-64 h-52 bg-cover rounded-xl ml-1 mt-2 mb-2 space-y-2 shadow-md shadow-black"
@@ -40,7 +39,9 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
       <div className="text-xl">{name}</div>
       <div className="text-5xl">{kelvinToCelcius(temp)}</div>
       <div className="text-lg">{status}</div>
-      <div className="text-lg">{`H: ${kelvinToCelcius(high)} L: ${kelvinToCelcius(low)}`}</div>
+      <div className="text-lg">{`H: ${kelvinToCelcius(
+        high
+      )} L: ${kelvinToCelcius(low)}`}</div>
     </div>
   );
 };

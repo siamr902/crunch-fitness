@@ -30,7 +30,8 @@ module.exports = {
       fontFamily: {
         "banner": ['Courgette'],
         "croissant": ['Croissant One'],
-        "oswald": ['Oswald']
+        "oswald": ['Oswald'],
+        "kalam": ['Kalam']
       },
       screens: {
         'smx': '450px'

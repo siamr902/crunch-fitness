@@ -15,8 +15,8 @@ const Navbar = () => {
         ease: "easeIn",
       }}
     >
-      <nav className="flex items-center px-5 lg:px-6 shadow-md justify-between bg-stone-100">
-        <div className="flex flex-center object-contain">
+      <nav className="flex items-center px-5 lg:px-6 shadow-md justify-between bg-stone-100 py-4 sm:py-0">
+        <div className="hidden sm:flex flex-center object-contain">
           <Image
             src={logo}
             width={100}

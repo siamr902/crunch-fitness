@@ -12,7 +12,7 @@ interface GroupClassProps {
 const GroupClass = ({ src, header, description, Icon }: GroupClassProps) => {
   return (
     <motion.div
-      className="relative group transition duration-300 ease-out rounded-md shadow-lg shadow-gray-400 w-[calc(100vw-10rem)] h-[250px] sm:w-[30vw] sm:h-[30vh] lg:h-[280px] lg:w-[300px] xl:h-[320px] xl:w-[380px] bg-no-repeat bg-cover object-contain"
+      className="relative group transition duration-300 ease-out rounded-md shadow-lg shadow-gray-400 w-[calc(100vw-7rem)] h-[250px] sm:w-[30vw] sm:h-[30vh] lg:h-[280px] lg:w-[300px] xl:h-[340px] xl:w-[400px] bg-no-repeat bg-cover object-contain"
       style={{ backgroundImage: `url(${src})` }}
       initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}

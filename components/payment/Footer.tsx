@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center">
         <div className="flex text-white space-x-2 items-center justify-start font-arial">
           <MdCopyright className="h-3 w-3" />
-          <div className="font-semibold text-lg tracking-wider">
+          <div className="font-semibold text-lg tracking-wider select-none">
             CRUNCH FITNESS
           </div>
         </div>
-        <div className="inline-flex text-sm text-white font-semibold tracking-widest opacity-40 mt-1">
+        <div className="inline-flex text-sm select-none text-white font-semibold tracking-widest opacity-40 mt-1">
           ALL RIGHTS RESERVED
         </div>
       </div>
