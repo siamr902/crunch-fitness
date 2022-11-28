@@ -28,7 +28,13 @@
     @apply hidden xl:inline-flex w-[5vw] h-[3vw]
   }
   .exercise {
-    @apply outline-none p-2 text-xl border border-gray-900 text-center rounded-lg
+    @apply outline-none p-2 border border-gray-900 text-center rounded-lg text-lg w-[33%]
+  }
+  .workout-section {
+    @apply flex flex-col items-center space-y-2 p-2 sm:max-w-[50vw]
+  }
+  .workout-header {
+    @apply text-4xl font-banner
   }
 }
 

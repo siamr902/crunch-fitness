@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { name, rating, exercises } = req.body;
+  const { name, rating, exercises, duration, notes } = req.body;
   const session = await getSession({ req });
 
   const result = await prisma?.workout.create({
@@ -17,6 +17,8 @@ export default async function handler(
       },
       name: name,
       rating: rating,
+      duration: duration,
+      notes: notes,
       exercises: {
         create: exercises,
       },

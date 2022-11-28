@@ -8,8 +8,8 @@ const variants = {
     y: "-100vh",
     transition: {
       type: "spring",
-      stiffness: 100
-    }
+      stiffness: 100,
+    },
   },
   visible: {
     opacity: 1,
@@ -17,8 +17,8 @@ const variants = {
     transition: {
       type: "spring",
       dampness: 25,
-      stiffness: 50
-    }
+      stiffness: 50,
+    },
   },
 };
 
@@ -53,8 +53,9 @@ const AddSession = () => {
             initial="hidden"
             animate="visible"
             exit="hidden"
+            className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]"
           >
-            <SessionModal setShowModal={setShowModal}/>
+            <SessionModal setShowModal={setShowModal} />
           </motion.div>
         ) : null}
       </AnimatePresence>

@@ -59,10 +59,11 @@ model Workout {
   id         String     @id @default(uuid())
   name       String
   rating     Int
+  duration   Int        @default(60)
+  notes      String?
   finishedAt DateTime   @default(now())
-  user       User?      @relation(fields: [userId, userEmail], references: [id, email])
+  user       User?      @relation(fields: [userId], references: [id])
   userId     String?
-  userEmail  String?
   exercises  Exercise[]
 
   @@index([rating])

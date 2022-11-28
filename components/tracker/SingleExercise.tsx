@@ -60,14 +60,14 @@ const SingleExercise = ({ setExercises, exercises }: Props) => {
       />
       <input
         type="number"
-        placeholder="resistance (kg)"
+        placeholder="resistance (lb)"
         className={`exercise ${disabled && "bg-gray-200 cursor-not-allowed"}`}
         min={0}
         onChange={(e) => (resistanceRef.current = e.target.value)}
         disabled={disabled}
       />
       <button
-        className={`p-3 text-xl font-kalam rounded-md outline-none active:scale-90 transition duration-200 ease-out ${
+        className={`p-1 sm:p-3 sm:text-xl font-kalam rounded-md outline-none active:scale-90 transition duration-200 ease-out ${
           disabled && "cursor-not-allowed"
         }`}
         onClick={() => handleComplete()}

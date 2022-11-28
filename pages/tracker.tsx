@@ -16,6 +16,8 @@ type Props = {
       id: string;
       name: string;
       rating: number;
+      duration: number;
+      notes: string;
     }[];
   };
 };
@@ -59,6 +61,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
           id: true,
           name: true,
           rating: true,
+          duration: true,
+          notes: true
         },
       },
     },
