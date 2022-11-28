@@ -3,6 +3,8 @@ import { AiOutlineStar, AiFillStar, AiOutlineClose } from "react-icons/ai";
 import { TrackerContext } from "../../contexts/TrackerContext";
 import { useRouter } from "next/router";
 import SingleExercise from "./SingleExercise";
+import { toast } from "react-toastify";
+import { exerciseToast } from "../../lib/toasts";
 
 type Props = {
   setShowModal: (v: boolean) => void;
@@ -27,7 +29,7 @@ const SessionModal = ({ setShowModal }: Props) => {
   const [workoutName, setWorkoutName] = useState<string>(
     `My Workout #${user.workouts.length + 1}`
   );
-  
+
   const nameRef = useRef<HTMLInputElement | null>(null);
   const durationRef = useRef<string>("");
   const notesRef = useRef<string>("");
@@ -37,6 +39,11 @@ const SessionModal = ({ setShowModal }: Props) => {
   }, []);
 
   const submitData = async () => {
+    if (!exercises.length) {
+      exerciseToast();
+      return;
+    }
+
     try {
       const body = {
         name: workoutName,
@@ -51,15 +58,16 @@ const SessionModal = ({ setShowModal }: Props) => {
         method: "POST",
       });
       await router.replace(router.asPath);
+      setShowModal(false);
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div className="w-[calc(100vw-2rem)] sm:w-[75vw] fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex flex-col space-y-8 items-center justify-start bg-zinc-50 p-4 shadow-md shadow-black font-kalam">
+    <div className="w-[calc(100vw-2rem)] sm:w-[75vw] z-40 fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex flex-col space-y-8 items-center justify-start bg-zinc-50 p-4 shadow-md shadow-black font-kalam">
       <AiOutlineClose
-        className="w-7 h-7 absolute top-3 right-3 cursor-pointer text-red-700"
+        className="w-7 h-7 absolute top-3 right-3 cursor-pointer text-red-700 active:scale-95 transition duration-200 ease-out"
         onClick={() => setShowModal(false)}
       />
       <input

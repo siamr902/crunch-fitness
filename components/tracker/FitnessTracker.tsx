@@ -3,6 +3,7 @@ import { useSession } from "next-auth/react";
 import React, { useContext } from "react";
 import { TrackerContext } from "../../contexts/TrackerContext";
 import AddWorkout from "./AddSession";
+import IntroBorder from "./IntroBorder";
 import NoWorkouts from "./NoWorkouts";
 import SingleWorkout from "./SingleWorkout";
 
@@ -42,6 +43,7 @@ const FitnessTracker = () => {
           {session?.user?.name?.split(" ")[0]}'s Workouts
         </div>
         <AddWorkout />
+        <IntroBorder />
         <div className="flex flex-col items-center justify-start">
           {workouts.map((workout: Workout) => (
             <div key={workout.name}>

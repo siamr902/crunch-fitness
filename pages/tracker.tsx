@@ -4,6 +4,8 @@ import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
 import Head from "next/head";
 import React from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/payment/Footer";
 import FitnessTracker from "../components/tracker/FitnessTracker";
 import Header from "../components/tracker/Header";
@@ -34,6 +36,7 @@ const Tracker = ({ user }: Props) => {
           <title>Crunch Tracker - Monitor Your Progress</title>
           <link rel="shortcut icon" href="/crunch-logo.svg" />
         </Head>
+        <ToastContainer />
         <Header />
         <FitnessTracker />
         <Footer />

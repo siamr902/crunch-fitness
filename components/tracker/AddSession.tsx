@@ -37,7 +37,7 @@ const AddSession = () => {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-800 to-orange-800">
             `+`
           </span>{" "}
-          to add a new workout!
+          to log a new workout!
         </div>
         <button
           className="font-banner text-center tracking-wider text-3xl rounded-md bg-gradient-to-tr from-red-500 to-orange-400 text-white py-2 px-5 active:scale-95 transition duration-200 ease-out outline-none"
@@ -53,7 +53,7 @@ const AddSession = () => {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]"
+            className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-40"
           >
             <SessionModal setShowModal={setShowModal} />
           </motion.div>

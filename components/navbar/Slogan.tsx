@@ -4,7 +4,6 @@ import { slogans } from "../../data/slogans";
 import { selectRandom } from "../../utils/selectRandom";
 import { IoMdExit } from "react-icons/io";
 import { signIn, signOut, useSession } from "next-auth/react";
-import { RiErrorWarningFill } from "react-icons/ri";
 
 const Slogan = () => {
   const { data: session } = useSession();

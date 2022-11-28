@@ -2,8 +2,8 @@ import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import { IoMdNotifications } from "react-icons/io";
 import generateRandomName from "../../utils/defaultRandomName";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { notifyUnauthenticated, notifyWelcome } from "../../lib/toasts";
 
 const Profile = () => {
   const { data: session } = useSession();
@@ -13,28 +13,11 @@ const Profile = () => {
   const handleClick = (): void => {
     setClicked(true);
     if (useGreenColor) {
-      session ? notifyWelcome() : notifyUnauthenticated();
+      session
+        ? notifyWelcome(session?.user?.name?.split(" ")[0])
+        : notifyUnauthenticated();
       setTimeout(() => setUseGreenColor(false), 1000);
     }
-  };
-
-  const notifyWelcome = (): void => {
-    toast(`Welcome, ${session?.user?.name?.split(" ")[0] ?? "Anonymous"}! 👋`, {
-      position: "top-center",
-      theme: "dark",
-      autoClose: 2000,
-      pauseOnHover: false,
-    });
-  };
-
-  const notifyUnauthenticated = (): void => {
-    toast("You must sign in to receive notifications.", {
-      type: "error",
-      position: "top-center",
-      theme: "dark",
-      autoClose: 3000,
-      pauseOnHover: false,
-    });
   };
 
   return (
@@ -63,9 +46,7 @@ const Profile = () => {
         />
         <div
           className={`rounded-full w-[18px] h-[18px] absolute ${
-            useGreenColor && session
-              ? "bg-green-500 animate-pulse"
-              : "hidden"
+            useGreenColor && session ? "bg-green-500 animate-pulse" : "hidden"
           } top-1 right-3 ${
             clicked && !useGreenColor && "animate-notification"
           }`}

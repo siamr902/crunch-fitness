@@ -3,7 +3,7 @@ import { MdCopyright } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center items-center w-full shadow-sm px-8 py-10 mt-3 bg-black">
+    <footer className="flex justify-center items-center w-full shadow-sm px-8 py-10 bg-black mt-3">
       <div className="flex flex-col items-center justify-center">
         <div className="flex text-white space-x-2 items-center justify-start font-arial">
           <MdCopyright className="h-3 w-3" />

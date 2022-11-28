@@ -34,7 +34,7 @@
     @apply flex flex-col items-center space-y-2 p-2 sm:max-w-[50vw]
   }
   .workout-header {
-    @apply text-4xl font-banner
+    @apply text-4xl font-banner text-transparent bg-clip-text bg-gradient-to-tr from-gray-900 to-pink-700 -z-10
   }
 }
 

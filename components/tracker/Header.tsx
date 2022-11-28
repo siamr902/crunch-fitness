@@ -6,7 +6,7 @@ import logo from "../../public/crunch-logo.svg";
 const Header = () => {
   const router = useRouter();
   return (
-    <header className="w-full h-[45px] flex justify-between px-5 items-start bg-black shadow-sm shadow-black mb-10">
+    <header className="w-full z-50 sticky top-0 h-[45px] flex justify-between px-5 items-start bg-black shadow-sm shadow-black mb-10">
       <Image
         src={logo}
         width={85}
