@@ -1,6 +1,19 @@
 import { toast } from "react-toastify";
 import styles from "../styles/toast.module.css";
 
+export const editDiscard = () => {
+  toast("Changes Discarded.", {
+    theme: "dark",
+    type: "info",
+    position: "top-center",
+    pauseOnFocusLoss: false,
+    pauseOnHover: false,
+    hideProgressBar: true,
+    autoClose: 2000,
+    bodyClassName: styles.toast,
+  });
+};
+
 export const exerciseToast = () => {
   toast("You need at least 1 exercise.", {
     theme: "dark",

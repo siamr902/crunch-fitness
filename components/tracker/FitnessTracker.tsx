@@ -46,7 +46,7 @@ const FitnessTracker = () => {
         <IntroBorder />
         <div className="flex flex-col items-center justify-start">
           {workouts.map((workout: Workout) => (
-            <div key={workout.name}>
+            <div key={workout.id}>
               <SingleWorkout workout={workout} />
             </div>
           ))}

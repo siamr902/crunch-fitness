@@ -6,32 +6,17 @@ import { HiMinus } from "react-icons/hi";
 import { BiEdit } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
 import ExerciseModal from "./ExerciseModal";
+import EditButton from "./EditButton";
 
 const variants = {
   hidden: {
     opacity: 0,
-    y: "-100vh",
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
   },
   visible: {
     opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      dampness: 25,
-      stiffness: 50,
-    },
   },
   exit: {
     opacity: 0,
-    y: "100vh",
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
   },
 };
 
@@ -61,14 +46,6 @@ const SingleWorkout = ({ workout }: Workout) => {
         headers: { "Content-Type": "application/json" },
         method: "DELETE",
       });
-      await router.replace(router.asPath);
-    } catch (error) {
-      console.error();
-    }
-  };
-
-  const updateWorkout = async () => {
-    try {
       await router.replace(router.asPath);
     } catch (error) {
       console.error(error);
@@ -114,10 +91,7 @@ const SingleWorkout = ({ workout }: Workout) => {
           className="w-8 h-8 cursor-pointer text-red-600 active:scale-95 transition duration-200 ease-out absolute top-2 left-2"
           onClick={() => deleteWorkout()}
         />
-        <BiEdit
-          className="w-8 h-8 cursor-pointer text-blue-600 active:scale-95 transition duration-200 ease-out absolute top-2 right-3"
-          onClick={() => updateWorkout()}
-        />
+        <EditButton workout={workout}/>
       </div>
       <AnimatePresence mode="wait">
         {showExercises ? (
@@ -126,7 +100,7 @@ const SingleWorkout = ({ workout }: Workout) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="z-40"
+            className="absolute"
           >
             <ExerciseModal
               exercises={exercises}

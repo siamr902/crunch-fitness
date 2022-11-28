@@ -1,10 +1,22 @@
-import { NextApiResponse } from 'next';
-import { NextApiRequest } from 'next';
+import { NextApiResponse, NextApiRequest } from "next";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const {id} = req.body;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { id, name, rating, duration, notes } = req.body;
 
-    const result = null;
+  const result = await prisma?.workout.update({
+    where: {
+      id: id
+    },
+    data: {
+      name: name,
+      rating: rating,
+      duration: duration,
+      notes: notes,
+    },
+  });
 
-    res.json(result);
+  res.json(result)
 }
