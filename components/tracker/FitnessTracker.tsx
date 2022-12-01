@@ -2,9 +2,11 @@ import { Exercise } from "@prisma/client";
 import { useSession } from "next-auth/react";
 import React, { useContext } from "react";
 import { TrackerContext } from "../../contexts/TrackerContext";
+import usePagination from "../../hooks/usePagination";
 import AddWorkout from "./AddSession";
 import IntroBorder from "./IntroBorder";
 import NoWorkouts from "./NoWorkouts";
+import PaginationButton from "./PaginationButton";
 import SingleWorkout from "./SingleWorkout";
 
 type Workout = {
@@ -21,6 +23,12 @@ const FitnessTracker = () => {
 
   const user = useContext(TrackerContext);
   const { workouts } = user;
+  const {
+    page = 1,
+    setPage = () => {},
+    paginatedWorkouts = workouts,
+    workoutsPerPage = 5,
+  } = usePagination({ workouts });
 
   if (!session)
     return (
@@ -45,11 +53,24 @@ const FitnessTracker = () => {
         <AddWorkout />
         <IntroBorder />
         <div className="flex flex-col items-center justify-start">
-          {workouts.map((workout: Workout) => (
+          {paginatedWorkouts.map((workout: Workout) => (
             <div key={workout.id}>
               <SingleWorkout workout={workout} />
             </div>
           ))}
+        </div>
+        <div className="flex flex-wrap gap-x-6 gap-y-4 justify-center items-center">
+          {Array.from(
+            { length: Math.ceil(workouts.length / workoutsPerPage) },
+            (_, idx) => (
+              <PaginationButton
+                page={page}
+                setPage={setPage}
+                pageNumber={idx + 1}
+                key={idx}
+              />
+            )
+          )}
         </div>
       </div>
     </div>

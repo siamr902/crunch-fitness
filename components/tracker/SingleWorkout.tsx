@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { HiMinus } from "react-icons/hi";
-import { BiEdit } from "react-icons/bi";
 import { AnimatePresence, motion } from "framer-motion";
 import ExerciseModal from "./ExerciseModal";
 import EditButton from "./EditButton";
