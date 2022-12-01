@@ -88,7 +88,7 @@ const SessionModal = ({ setShowModal }: Props) => {
           ))}
           {Array.from({ length: outlineStars - fillStars }, (_, i) => (
             <AiOutlineStar
-              className="w-8 h-8 cursor-pointer text-gray-700 hover:text-orange-500 transition duration-200 ease-in-out"
+              className="w-8 h-8 cursor-pointer text-gray-700 transition duration-200 ease-in-out"
               onClick={() => setFillStars((prev) => prev + i + 1)}
               key={i}
             />

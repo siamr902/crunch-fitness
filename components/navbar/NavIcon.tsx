@@ -9,7 +9,7 @@ type IconProps = {
   route?: string;
 };
 
-const NavIcon = ({ Icon, id, popup, route = "/" }: IconProps) => {
+const NavIcon = ({ Icon, id, popup, route = "/#" }: IconProps) => {
   const [hover, setHover] = useState<boolean>(false);
 
   return (

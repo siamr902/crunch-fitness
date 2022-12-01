@@ -1,30 +1,13 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { slogans } from "../../data/slogans";
-import { selectRandom } from "../../utils/selectRandom";
+import React, { useState } from "react";
 import { IoMdExit } from "react-icons/io";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useGenerateSlogan } from "../../hooks/useGenerateSlogan";
 
 const Slogan = () => {
   const { data: session } = useSession();
-
   const [hover, setHover] = useState<boolean>(false);
-  const [slogan, setSlogan] = useState<string>("#NOJUDGEMENTS");
-  const [span, setSpan] = useState<string>("");
-
-  const generateSlogan = (): void => {
-    const [randomSlogan, spanCharacter] = selectRandom(slogans);
-    if (spanCharacter === span) {
-      generateSlogan();
-    } else {
-      setSlogan(randomSlogan.slice(spanCharacter.length + 1));
-      setSpan(spanCharacter);
-    }
-  };
-
-  useEffect(() => {
-    generateSlogan();
-  }, []);
+  const { slogan, span, generateSlogan } = useGenerateSlogan();
 
   return (
     <div className="w-full bg-gradient-to-r from-[#0e1111] to-[#222] h-15 flex justify-between p-2 shadow-sm">

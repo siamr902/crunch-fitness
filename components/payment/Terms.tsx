@@ -7,7 +7,7 @@ const Terms = () => {
       <div className="text-gray-600 font-semibold">
         * An annual fee will be billed once per year. To see details of when you
         will be charged the full annual fee, see the{" "}
-        <a href={termLink} target="_blank">
+        <a href={termLink} target="_blank" rel="noopener noreferrer">
           <span className="underline underline-offset-1 cursor-pointer">
             Terms and Conditions
           </span>{" "}

@@ -18,7 +18,7 @@ const GroupClass = ({ src, header, description, Icon }: GroupClassProps) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{
-        opacity: { duration: 4 },
+        opacity: { duration: 2 },
         scale: { duration: 0 },
       }}
       whileHover={{ scale: 1.02 }}
