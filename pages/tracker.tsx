@@ -1,4 +1,4 @@
-import { Exercise, User, Workout } from "@prisma/client";
+import { Exercise, User } from "@prisma/client";
 import { motion } from "framer-motion";
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
@@ -10,6 +10,7 @@ import Footer from "../components/payment/Footer";
 import FitnessTracker from "../components/tracker/FitnessTracker";
 import Header from "../components/tracker/Header";
 import { TrackerContext } from "../contexts/TrackerContext";
+import { prisma } from "../lib/prisma";
 
 type Props = {
   user: User & {
@@ -65,7 +66,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
           name: true,
           rating: true,
           duration: true,
-          notes: true
+          notes: true,
         },
       },
     },
