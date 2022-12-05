@@ -11,8 +11,8 @@ const NavIcons = () => {
     <motion.div className="flex justify-evenly space-x-4 lg:pl-28 translate-y-1 flex-grow">
       <NavIcon Icon={Trainers} popup="Trainers" route="/#trainers" />
       <NavIcon Icon={Workouts} id={4} popup="Classes" route="/#classes" />
-      <NavIcon Icon={Payment} popup="Payment" route="payment" />
-      <NavIcon Icon={Tracker} popup="Tracker" route="tracker" />
+      <NavIcon Icon={Payment} popup="Payment" route="/payment" />
+      <NavIcon Icon={Tracker} popup="Tracker" route="/tracker" />
     </motion.div>
   );
 };
