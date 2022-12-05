@@ -43,6 +43,7 @@ const Trainer = ({
           src={pic!}
           width={150}
           height={150}
+          alt={name}
           className="rounded-full"
         />
       </div>

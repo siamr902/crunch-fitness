@@ -48,7 +48,7 @@ const FitnessTracker = () => {
       {!workouts.length && <NoWorkouts />}
       <div className="flex flex-col space-y-8 items-center">
         <div className="text-center text-3xl sm:text-[42px] font-kalam text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-orange-700 font-semibold">
-          {session?.user?.name?.split(" ")[0]}'s Workouts
+          {session?.user?.name?.split(" ")[0]}&apos;s Workouts
         </div>
         <AddWorkout />
         <IntroBorder />

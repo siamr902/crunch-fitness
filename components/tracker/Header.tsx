@@ -11,6 +11,7 @@ const Header = () => {
         src={logo}
         width={85}
         height={65}
+        alt="Crunch Logo"
         className="cursor-pointer hover:-rotate-180 transition transform-all ease-out delay-150 duration-300 object-contain"
         onClick={() => router.push("/")}
       />

@@ -4,6 +4,7 @@ import { IoMdNotifications } from "react-icons/io";
 import generateRandomName from "../../utils/defaultRandomName";
 import "react-toastify/dist/ReactToastify.css";
 import { notifyUnauthenticated, notifyWelcome } from "../../lib/toasts";
+import Image from "next/image";
 
 const Profile = () => {
   const { data: session } = useSession();
@@ -24,9 +25,12 @@ const Profile = () => {
     <div className="hidden sm:flex items-center sm:space-x-2 justify-evenly">
       <div className="mr-5">
         {session && (
-          <img
+          <Image
+            height={48}
+            width={48}
             src={session?.user?.image!}
             className="hidden lg:inline-flex rounded-full h-12 cursor-pointer hover:rotate-90 transition duration-150 delay-100 ease-in-out"
+            alt={session?.user?.name || "User"}
           />
         )}
       </div>

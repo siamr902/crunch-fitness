@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ObjectiveProps {
@@ -9,10 +10,12 @@ interface ObjectiveProps {
 const CrunchObjective = ({ src, header, content }: ObjectiveProps) => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <img
+      <Image
         src={src}
         alt={header}
-        className="w-100 h h-64 scale-75 object-contain"
+        width={216}
+        height={216}
+        className="w-100 h-64 scale-75 object-contain"
       />
       <div className="text-3xl font-bold scale-x-90 tracking-tighter text-[#222] uppercase">
         {header}

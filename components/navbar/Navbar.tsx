@@ -21,6 +21,7 @@ const Navbar = () => {
             src={logo}
             width={100}
             height={80}
+            alt="Crunch Logo"
             className="cursor-pointer hover:-rotate-180 transition transform-all ease-out delay-150 duration-300"
             onClick={() =>
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
