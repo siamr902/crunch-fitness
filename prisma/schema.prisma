@@ -58,7 +58,7 @@ model VerificationToken {
 model Workout {
   id         String     @id @default(uuid())
   name       String
-  rating     Int
+  rating     Int        @default(3)
   duration   Int        @default(60)
   notes      String?
   finishedAt DateTime   @default(now())
