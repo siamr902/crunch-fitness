@@ -1,6 +1,19 @@
 import { toast } from "react-toastify";
 import styles from "../styles/toast.module.css";
 
+export const editSuccess = () => {
+  toast("Your changes were successful", {
+    theme: "dark",
+    type: "success",
+    position: "top-center",
+    pauseOnFocusLoss: false,
+    pauseOnHover: false,
+    hideProgressBar: true,
+    autoClose: 2000,
+    bodyClassName: styles.toast,
+  });
+};
+
 export const editDiscard = () => {
   toast("Changes Discarded.", {
     theme: "dark",

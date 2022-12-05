@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiSave } from "react-icons/bi";
-import { editDiscard } from "../../lib/toasts";
+import { editDiscard, editSuccess } from "../../lib/toasts";
 
 interface Props {
   setShowEdit: (v: boolean) => void;
@@ -42,6 +42,7 @@ const EditModal = ({ setShowEdit, workout }: Props) => {
         method: "PATCH",
       });
       await router.replace(router.asPath);
+      editSuccess();
       setShowEdit(false);
     } catch (error) {
       console.error(error);

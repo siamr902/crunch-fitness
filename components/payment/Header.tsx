@@ -29,7 +29,7 @@ const Header = () => {
             onClick={() => router.push("/")}
           />
         <div
-          className="absolute top-[50%] -translate-y-[50%] right-8 cursor-pointer hover:scale-90 active:scale-100 transition ease-in-out duration-200"
+          className="absolute top-[50%] -translate-y-[50%] right-8 cursor-pointer hover:scale-95 active:scale-100 transition ease-in-out duration-200"
           onClick={() => signOut({ callbackUrl: "/" })}
         >
           <IoMdLogOut className="w-8 h-8 text-orange-300" />
