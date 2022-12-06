@@ -23,6 +23,7 @@ const FitnessTracker = () => {
 
   const user = useContext(TrackerContext);
   const { workouts } = user;
+  
   const {
     page = 1,
     setPage = () => {},

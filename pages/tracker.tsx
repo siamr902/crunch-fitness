@@ -48,8 +48,8 @@ const Tracker = ({ user }: Props) => {
 
 export default Tracker;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const session = await getSession();
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const session = await getSession({ req });
 
   const user = await prisma?.user.findFirst({
     where: {
