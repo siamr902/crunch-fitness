@@ -3,7 +3,6 @@ import { AiOutlineStar, AiFillStar, AiOutlineClose } from "react-icons/ai";
 import { TrackerContext } from "../../contexts/TrackerContext";
 import { useRouter } from "next/router";
 import SingleExercise from "./SingleExercise";
-import { toast } from "react-toastify";
 import { exerciseToast } from "../../lib/toasts";
 
 type Props = {

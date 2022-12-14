@@ -1,7 +1,7 @@
-import { Exercise, User } from "@prisma/client";
+import { Exercise, User as Member } from "@prisma/client";
 import { createContext } from "react";
 
-type user = User & {
+type User = Member & {
   workouts: {
     exercises: Exercise[];
     id: string;
@@ -12,4 +12,4 @@ type user = User & {
   }[];
 };
 
-export const TrackerContext = createContext({} as user);
+export const TrackerContext = createContext({} as User);
