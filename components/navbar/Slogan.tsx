@@ -44,7 +44,7 @@ const Slogan = () => {
       ) : (
         <div className="pr-4">
           <button
-            className="font-semibold flex space-x-2 items-center text-md tracking-wide uppercase py-2 px-3 bg-red-600 text-white rounded-[8px] active:scale-90 transition duration-200 ease-out"
+            className="font-semibold flex rounded-[2px] items-center text-md uppercase py-2 px-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-serif active:scale-90 transition duration-200 ease-out"
             onClick={() => signIn()}
           >
             Sign In

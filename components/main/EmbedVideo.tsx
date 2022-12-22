@@ -26,7 +26,7 @@ const EmbedVideo = () => {
       <div className="font-semibold tracking-wide text-center text-md sm:text-lg">
         Train with our experts to drive your results.
       </div>
-      <div className="uppercase font-bold text-xs text-center tracking-widest cursor-pointer pt-4 text-orange-400 hover:text-black transition duration-300 ease-in-out">
+      <div className="uppercase font-bold text-xs text-center tracking-widest cursor-pointer pt-4 text-orange-600 hover:text-black transition duration-300 ease-in-out">
         Learn more about our individual and small group training programs
       </div>
       <YouTube
