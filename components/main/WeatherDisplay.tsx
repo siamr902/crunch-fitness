@@ -1,4 +1,4 @@
-import { kelvinToCelcius } from "../../utils/kelvinToCelcius";
+import { kelvinToFahrenheit } from "../../utils/kelvinToCelcius";
 import { getWeatherImageText } from "../../utils/getWeatherImageText";
 
 interface WeatherProps {
@@ -37,11 +37,11 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
       }}
     >
       <div className="text-xl">{name}</div>
-      <div className="text-5xl">{kelvinToCelcius(temp)}</div>
+      <div className="text-5xl">{kelvinToFahrenheit(temp)}</div>
       <div className="text-lg">{status}</div>
-      <div className="text-lg">{`H: ${kelvinToCelcius(
+      <div className="text-lg">{`H: ${kelvinToFahrenheit(
         high
-      )} L: ${kelvinToCelcius(low)}`}</div>
+      )} L: ${kelvinToFahrenheit(low)}`}</div>
     </div>
   );
 };

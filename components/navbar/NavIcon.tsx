@@ -20,7 +20,7 @@ const NavIcon = ({ Icon, id, popup, route = "/#" }: IconProps) => {
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
         >
-          <div className="hidden sm:group-hover:inline-flex text-xs italic absolute font-bold -top-[17px] left-[25px] font-croissant text-orange-700">
+          <div className="hidden sm:group-hover:inline-flex text-xs absolute font-bold -top-[17px] left-[25px] font-serif text-orange-700">
             {popup ?? ""}
           </div>
           <Icon
