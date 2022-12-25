@@ -61,7 +61,7 @@ const EditModal = ({ setShowEdit, workout }: Props) => {
         onClick={() => handleShowEdit()}
       />
       <BiSave
-        className="absolute bottom-3 left-3 w-8 h-8 cursor-pointer active:scale-95 transition duration-200 ease-out"
+        className="absolute bottom-3 right-3 w-8 h-8 cursor-pointer active:scale-95 transition duration-200 ease-out"
         onClick={() => updateWorkout()}
       />
       <div className="text-4xl text-center">Edit</div>
@@ -98,7 +98,7 @@ const EditModal = ({ setShowEdit, workout }: Props) => {
         <div>Notes:</div>
         <textarea
           className="resize-none p-4 outline-none border-b-2 bg-zinc-50 border-black rounded-lg text-2xl text-center w-[80%]"
-          placeholder="Optional Comments"
+          placeholder="Optional"
           onChange={(e) => setWorkoutNotes(e.target.value)}
           value={workoutNotes}
         ></textarea>

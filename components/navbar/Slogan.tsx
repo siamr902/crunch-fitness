@@ -35,7 +35,7 @@ const Slogan = () => {
           </div>
           <IoMdExit
             color="#FFFFFF"
-            className="text-4xl cursor-pointer text-gray-300 transition transform hover:scale-90"
+            className="text-[34px] cursor-pointer text-gray-300 transition transform hover:scale-90"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={() => signOut()}

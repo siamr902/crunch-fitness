@@ -64,13 +64,13 @@ const SessionModal = ({ setShowModal }: Props) => {
   };
 
   return (
-    <div className="w-[calc(100vw-2rem)] sm:w-[75vw] z-40 fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex flex-col space-y-8 items-center justify-start bg-zinc-50 p-4 shadow-md shadow-black font-kalam">
+    <div className="w-[calc(100vw-2rem)] sm:w-[75vw] z-40 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] flex flex-col space-y-8 items-center justify-start bg-zinc-50 p-3 shadow-md shadow-black font-kalam">
       <AiOutlineClose
         className="w-7 h-7 absolute top-3 right-3 cursor-pointer text-red-700 active:scale-95 transition duration-200 ease-out"
         onClick={() => setShowModal(false)}
       />
       <input
-        className="text-[32px] sm:text-[40px] font-kalam text-center outline-none bg-transparent text-black"
+        className="text-[32px] sm:text-[38px] font-kalam text-center outline-none bg-transparent text-black"
         value={workoutName}
         onChange={(e) => setWorkoutName(e.target.value)}
         ref={nameRef}
@@ -107,7 +107,7 @@ const SessionModal = ({ setShowModal }: Props) => {
       </div>
       <div className="flex flex-col space-y-4 items-center">
         <div className="text-4xl text-center">Exercises</div>
-        <div className="max-h-[12vh] overflow-auto flex flex-col space-y-2">
+        <div className="max-h-[10vh] overflow-auto flex flex-col space-y-2">
           {Array.from({ length: numberOfExercises }, (_, i) => (
             <div key={i}>
               <SingleExercise
@@ -128,7 +128,7 @@ const SessionModal = ({ setShowModal }: Props) => {
         <div className="font-kalam text-3xl text-center">New Milestone?</div>
         <textarea
           className="resize-none p-4 outline-none border-b-2 bg-zinc-50 border-black rounded-lg text-2xl text-center w-[100%]"
-          placeholder="Optional Comments"
+          placeholder="Optional"
           onChange={(e) => (notesRef.current = e.target.value)}
         ></textarea>
       </div>

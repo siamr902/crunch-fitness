@@ -19,7 +19,6 @@ const CrunchMode = () => {
         </div>
         <motion.button
           className="px-10 py-3 shadow-sm shadow-orange-200 bg-orange-100 uppercase rounded-sm tracking-widest font-bold text-red-800 text-sm md:text-[1vw]"
-          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => router.push("/payment")}
         >

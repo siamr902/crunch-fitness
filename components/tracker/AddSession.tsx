@@ -28,7 +28,7 @@ const AddSession = () => {
   return (
     <>
       <div className="flex space-y-4 flex-col items-center">
-        <div className="text-xl text-center font-banner">
+        <div className="text-xl text-center font-oswald">
           Click{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-800 to-orange-800">
             `add session`

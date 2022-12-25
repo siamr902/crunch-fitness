@@ -55,7 +55,7 @@ const SingleWorkout = ({ workout }: Workout) => {
     <>
       <div className="relative flex flex-col items-center p-2 space-y-3 justify-evenly w-screen border-b-2 lg:border-b-[3px] border-gray-900 border-gradient">
         <div className="workout-section">
-          <div className="text-4xl sm:text-5xl text-center font-banner text-transparent bg-clip-text bg-gradient-to-tr from-pink-700 to-blue-700 -z-10">
+          <div className="text-4xl sm:text-5xl text-center font-oswald text-transparent bg-clip-text bg-gradient-to-tr from-pink-700 to-blue-700 -z-10">
             {name}
           </div>
         </div>
@@ -68,21 +68,21 @@ const SingleWorkout = ({ workout }: Workout) => {
         </div>
         <div className="workout-section">
           <div className="workout-header">Duration</div>
-          <div className="text-2xl font-banner text-center">
+          <div className="text-2xl font-oswald text-center">
             {duration} minutes
           </div>
         </div>
         <div className="workout-section">
           <div className="workout-header">Exercises</div>
           <button
-            className="text-xl font-banner text-center underline underline-offset-4 decoration-dotted active:scale-95 transition duration-200 ease-out"
+            className="text-xl font-oswald text-center underline underline-offset-4 decoration-dotted active:scale-95 transition duration-200 ease-out"
             onClick={() => setShowExercises(true)}
           >
             View Exercises
           </button>
           <div className="workout-section">
             <div className="workout-header">Notes</div>
-            <p className="text-xl font-banner w-full break-words overflow-hidden">{notes}</p>
+            <p className="text-xl font-oswald w-full break-words overflow-hidden">{notes}</p>
           </div>
         </div>
         <HiMinus
