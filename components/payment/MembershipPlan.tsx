@@ -51,7 +51,7 @@ const MembershipPlan = ({
         <div className="mt-5 text-gray-400 text-sm text-center font-semibold">
           Monthly Recurring Payment
         </div>
-        <div className="h-[2px] bg-[#333] w-[25%] my-5"></div>
+        <hr className="h-[2px] bg-[#333] w-[25%] my-5"></hr>
         <div
           className="uppercase font-semibold text-center"
           style={{ color: color }}
@@ -81,7 +81,7 @@ const MembershipPlan = ({
       >
         <div className="uppercase font-bold tracking-widest pt-5">Includes</div>
         {info.map((piece) => (
-          <div key={piece} className="text-white font-semibold my-[2px]">
+          <div key={piece} className="text-white font-semibold text-sm my-[2px]">
             {piece}
           </div>
         ))}

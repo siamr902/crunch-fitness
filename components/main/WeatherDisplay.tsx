@@ -30,7 +30,7 @@ const WeatherDisplay = ({ weatherData }: WeatherProps) => {
 
   return (
     <div
-      className="hidden lg:flex justify-center items-center flex-col font-croissant w-64 h-52 bg-cover rounded-xl ml-1 mt-2 mb-2 space-y-2 shadow-md shadow-black"
+      className="hidden lg:flex justify-center items-center flex-col font-croissant w-64 h-52 bg-cover rounded-xl ml-1 mt-2 mb-2 space-y-2 shadow-sm shadow-black"
       style={{
         backgroundImage: `url('/${status.toLowerCase()}weather.jpg')`,
         color: `${getWeatherImageText(status)}`,
