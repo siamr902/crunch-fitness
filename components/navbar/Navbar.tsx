@@ -7,14 +7,6 @@ import Profile from "./Profile";
 
 const Navbar = () => {
   return (
-    <motion.aside
-      initial={{ opacity: 0, y: -200 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 1,
-        ease: "easeIn",
-      }}
-    >
       <nav className="flex items-center px-5 lg:px-6 shadow-md justify-between bg-stone-100 py-4 sm:py-0">
         <div className="hidden sm:flex flex-center object-contain">
           <Image
@@ -31,7 +23,6 @@ const Navbar = () => {
         <NavIcons />
         <Profile />
       </nav>
-    </motion.aside>
   );
 };
 
