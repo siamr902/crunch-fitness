@@ -10,8 +10,8 @@ const NoJudgement = () => {
         No Judgements Are the Best Kind
       </div>
       <div className="font-semibold text-md sm:text-lg text-center">
-        Differences are <span className="italic text-orange-700">encouraged.</span> Quirks are{" "}
-        <span className="italic text-orange-700">welcomed.</span>
+        Differences are <span className="text-orange-700">encouraged.</span> Quirks are{" "}
+        <span className="text-orange-700">welcomed.</span>
       </div>
       <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:space-x-5 -z-10">
         {objectives.map((objective) => (

@@ -47,7 +47,7 @@ const Trainer = ({
           className="rounded-full"
         />
       </div>
-      <div className="text-xl sm:text-[1.5vw] font-banner">{name}</div>
+      <div className="text-xl sm:text-[1.5vw] font-oswald">{name}</div>
       <div className="sm:text-[1.25vw] font-croissant font-semibold text-red-800">{age}</div>
       <div className="sm:text-[1.15vw] font-oswald opacity-90">{desc}</div>
       <BsFillTelephoneFill
