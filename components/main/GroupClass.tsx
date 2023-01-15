@@ -14,11 +14,7 @@ const GroupClass = ({ src, header, description, Icon }: GroupClassProps) => {
     <motion.div
       className="relative group transition duration-300 ease-out rounded-md shadow-lg shadow-gray-400 w-[calc(100vw-7rem)] h-[250px] sm:w-[30vw] sm:h-[30vh] lg:h-[280px] lg:w-[300px] xl:h-[340px] xl:w-[400px] bg-no-repeat bg-cover object-contain"
       style={{ backgroundImage: `url(${src})` }}
-      initial={{ opacity: 0.5 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
       transition={{
-        opacity: { duration: 2 },
         scale: { duration: 0 },
       }}
       whileHover={{ scale: 1.02 }}

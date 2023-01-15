@@ -62,7 +62,7 @@ const SingleWorkout = ({ workout }: Workout) => {
         <div className="workout-section">
           <div className="workout-header">Rating</div>
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-banner">{rating}</div>
+            <div className="text-2xl font-oswald">{rating}</div>
             <AiFillStar className="w-7 h-7 text-orange-500" />
           </div>
         </div>
